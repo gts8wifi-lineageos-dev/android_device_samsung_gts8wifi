@@ -274,3 +274,8 @@ wifi.aware.interface=wifi-aware0
 # Fingerprint
 ro.vendor.fingerprint.type=side
 ro.vendor.fingerprint.sensor_location=1636|295|130|local:4630947232161729153
+
+## Vibrator HAL
+ro.vendor.vibrator_hal.click_duration=60
+ro.vendor.vibrator_hal.texture_tick_duration=40
+ro.vendor.vibrator_hal.tick_duration=40
