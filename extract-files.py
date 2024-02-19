@@ -103,6 +103,10 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/unihal_android.so',
      'vendor/lib/libapex_cmn.so'): blob_fixup()
         .add_needed('libui_shim.so'),
+
+    'vendor/bin/hw/macloader': blob_fixup()
+        .binary_regex_replace(b'vendor.wifi.dualconcurrent.interface', b'vendor.wiff.dualconcurrent.interface')
+        .binary_regex_replace(b'ro.vendor.wifi.sap.interface', b'ru.vendor.wifi.sap.interface'),
 }
 
 module = ExtractUtilsModule(
