@@ -228,13 +228,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/Vendor_04e8.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_04e8.kl
 
 # Keymint
-PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore.xml
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml \
-    frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
-    frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
+    $(LOCAL_PATH)/configs/permissions/android.hardware.hardware_keystore_v100.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml \
+    $(LOCAL_PATH)/configs/permissions/android.hardware.strongbox_keystore_v4.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml
 
 # Lineage Health
 PRODUCT_PACKAGES += \
