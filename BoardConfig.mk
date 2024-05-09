@@ -207,6 +207,7 @@ VENDOR_SECURITY_PATCH := 2025-07-01
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 PRODUCT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private

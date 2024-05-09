@@ -95,6 +95,28 @@ on post-fs-data && property:ro.boot.cp_debug_level=0x5500 && property:ro.boot.de
    setprop persist.vendor.ssr.restart_level ALL_DISABLE
 
 on early-boot
+# Permissions for Touchscreen
+    chown system system /sys/class/sec/tsp/cmd
+    chown system system /sys/class/sec/tsp/input/enabled
+    chmod 0660 /sys/class/sec/tsp/input/enabled
+    chown root system /proc/tsp_msg
+    chmod 0440 /proc/tsp_msg
+    chown system system /sys/class/sec/tsp/multi_count
+    chown system system /sys/class/sec/tsp/wet_mode
+    chown system system /sys/class/sec/tsp/noise_mode
+    chown system system /sys/class/sec/tsp/comm_err_count
+    chown system system /sys/class/sec/tsp/checksum
+    chown system system /sys/class/sec/tsp/all_touch_count
+    chown system system /sys/class/sec/tsp/z_value
+    chown system system /sys/class/sec/tsp/sensitivity_mode
+    chown system system /sys/class/sec/tsp/prox_power_off
+    chown system system /sys/class/sec/tsp/ic_reset_count
+    chown system system /sys/class/sec/tsp/mode_change_failed_count
+    chown system system /dev/tspio
+    chown system system /sys/class/sec/tsp/ear_detect_enable
+    chown system system /sys/class/sec/tsp/hw_param
+    chown system system /sys/class/sec/tsp/dualscreen_policy
+    chown system system /sys/class/sec/tsp/virtual_prox
 
 on boot
     write /proc/sys/vm/stat_interval 10
