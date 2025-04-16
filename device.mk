@@ -202,7 +202,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/idc/hall.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/hall.idc \
     $(LOCAL_PATH)/configs/idc/hall_logical.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/hall_logical.idc \
     $(LOCAL_PATH)/configs/idc/hall_wacom.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/hall_wacom.idc \
-    $(LOCAL_PATH)/configs/idc/wacom_hall.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/wacom_hall.idc
+    $(LOCAL_PATH)/configs/idc/wacom_hall.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/wacom_hall.idc \
+    $(LOCAL_PATH)/configs/idc/Vendor_04e8_Product_a035.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/Vendor_04e8_Product_a035.idc
 
 # IPACM
 PRODUCT_PACKAGES += \
