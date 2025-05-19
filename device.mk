@@ -245,6 +245,10 @@ $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
+# Mountpoint
+PRODUCT_PACKAGES += \
+    vendor_dsp_mountpoint
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
