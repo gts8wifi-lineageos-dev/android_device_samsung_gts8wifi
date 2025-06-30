@@ -1337,7 +1337,6 @@ vendor/bin/hw/vendor.samsung.hardware.tlc.hdm@1.1-service
 vendor/bin/hw/vendor.samsung.hardware.tlc.iccc@1.0-service
 vendor/bin/hw/vendor.samsung.hardware.tlc.kg-service
 vendor/bin/hw/vendor.samsung.hardware.tlc.ucm@2.0-service
-vendor/bin/hw/vendor.samsung.hardware.vibrator-service
 vendor/bin/hw/vendor.samsung.hardware.wifi@2.0-service
 vendor/bin/StoreKeybox
 vendor/bin/add.pb
@@ -1478,7 +1477,6 @@ vendor/etc/init/vendor.samsung.hardware.tlc.hdm@1.1-service.rc
 vendor/etc/init/vendor.samsung.hardware.tlc.iccc@1.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.tlc.kg-service.rc
 vendor/etc/init/vendor.samsung.hardware.tlc.ucm@2.0-service.rc
-vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc
 vendor/etc/init/vendor.samsung.hardware.wifi@2.0-service.rc
 vendor/etc/init/vendor.sensordebug.rc
 vendor/etc/init/vendor.sensors.qti.rc
@@ -1606,7 +1604,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.ddar@1.0-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.hdm@1.1-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.iccc@1.0-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.kg-manifest.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.wifi.hostapd.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.wifi@2.0-service.xml
 vendor/etc/DsgpPolicy.csv
@@ -2678,7 +2675,6 @@ vendor/lib64/vendor.samsung.hardware.tlc.iccc@1.0.so
 vendor/lib64/vendor.samsung.hardware.tlc.kg-V2-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.tlc.ucm@2.0-impl.so
 vendor/lib64/vendor.samsung.hardware.tlc.ucm@2.0.so
-vendor/lib64/vendor.samsung.hardware.vibrator-V4-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.wifi.hostapd@4.0.so
 vendor/lib64/vendor.samsung.hardware.wifi.supplicant@3.0.so
 vendor/lib64/vendor.samsung.hardware.wifi.supplicant@3.1.so
