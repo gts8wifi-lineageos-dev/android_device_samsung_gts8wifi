@@ -98,6 +98,9 @@ blob_fixups: blob_fixups_user_type = {
       'vendor/lib64/camx.device@3.4-impl.so'): blob_fixup()
         .add_needed('libcamera_provider_shim.so'),
 
+     'vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so': blob_fixup()
+        .add_needed('libshim_camera.so'),
+
     ('vendor/lib64/libmpp_common_vendor.so',
      'vendor/lib64/libc2filterplugin.so',
      'vendor/lib64/unihal_android.so',
