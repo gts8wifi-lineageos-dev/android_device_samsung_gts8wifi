@@ -329,7 +329,8 @@ PRODUCT_COPY_FILES += \
 
 # SamsungParts
 PRODUCT_PACKAGES += \
-   SamsungParts
+   SamsungParts \
+   SPenActions
 
 # Sensors
 PRODUCT_PACKAGES += \
