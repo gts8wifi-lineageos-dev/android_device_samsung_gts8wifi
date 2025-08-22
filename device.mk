@@ -330,7 +330,8 @@ PRODUCT_COPY_FILES += \
 # SamsungParts
 PRODUCT_PACKAGES += \
    SamsungParts \
-   SPenActions
+   SPenActions \
+   vendor.samsung.hardware.spen-service
 
 # Sensors
 PRODUCT_PACKAGES += \
