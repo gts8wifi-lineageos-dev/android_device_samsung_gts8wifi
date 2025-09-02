@@ -7,6 +7,22 @@
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Add common symlinks definitions for Qualcomm
+$(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
+# Enable project quotas and casefolding for emulated storage without sdcardfs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# Enforce generic ramdisk allow list
+$(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
+
+# Non-A/B device
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 31
 
