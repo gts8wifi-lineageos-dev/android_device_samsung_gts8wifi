@@ -212,7 +212,10 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/samsung \
+    kernel/samsung/sm8450 \
+    kernel/samsung/sm8450-modules
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/gts8wifi/gts8wifi-vendor.mk)
