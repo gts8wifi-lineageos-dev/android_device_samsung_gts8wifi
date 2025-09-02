@@ -149,70 +149,16 @@ vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib64/libar-pal.so
 
 # Audio configs
-vendor/etc/audio/sku_cape/audio_effects.conf
-vendor/etc/audio/sku_cape/audio_effects.xml
-vendor/etc/audio/sku_cape/mixer_paths.xml
-vendor/etc/audio/sku_cape/mixer_paths_waipio_cdp.xml
-vendor/etc/audio/sku_cape/mixer_paths_waipio_mtp.xml
-vendor/etc/audio/sku_cape/mixer_paths_waipio_qrd.xml
-vendor/etc/audio/sku_cape/resourcemanager.xml
-vendor/etc/audio/sku_cape/resourcemanager_upd.xml
-vendor/etc/audio/sku_cape/resourcemanager_waipio_cdp.xml
-vendor/etc/audio/sku_cape/resourcemanager_waipio_mtp.xml
-vendor/etc/audio/sku_cape/resourcemanager_waipio_qrd.xml
-vendor/etc/audio/sku_cape_qssi/audio_policy_configuration.xml
-vendor/etc/audio/sku_diwali/audio_effects.conf
-vendor/etc/audio/sku_diwali/audio_effects.xml
-vendor/etc/audio/sku_diwali/mixer_paths_diwali_idp.xml
-vendor/etc/audio/sku_diwali/mixer_paths_diwali_idp_sku1.xml
-vendor/etc/audio/sku_diwali/mixer_paths_diwali_qrd.xml
-vendor/etc/audio/sku_diwali/mixer_paths_diwali_qrd_sku1.xml
-vendor/etc/audio/sku_diwali/resourcemanager_diwali_idp.xml
-vendor/etc/audio/sku_diwali/resourcemanager_diwali_idp_sku1.xml
-vendor/etc/audio/sku_diwali/resourcemanager_diwali_qrd.xml
-vendor/etc/audio/sku_diwali/resourcemanager_diwali_qrd_sku1.xml
-vendor/etc/audio/sku_diwali/resourcemanager_upd.xml
-vendor/etc/audio/sku_diwali_qssi/audio_policy_configuration.xml
-vendor/etc/audio/sku_parrot/audio_effects.conf
-vendor/etc/audio/sku_parrot/audio_effects.xml
-vendor/etc/audio/sku_parrot/mixer_paths_diwali_idp.xml
-vendor/etc/audio/sku_parrot/mixer_paths_diwali_idp_sku1.xml
-vendor/etc/audio/sku_parrot/mixer_paths_diwali_qrd.xml
-vendor/etc/audio/sku_parrot/mixer_paths_diwali_qrd_sku1.xml
-vendor/etc/audio/sku_parrot/resourcemanager_diwali_idp.xml
-vendor/etc/audio/sku_parrot/resourcemanager_diwali_idp_sku1.xml
-vendor/etc/audio/sku_parrot/resourcemanager_diwali_qrd.xml
-vendor/etc/audio/sku_parrot/resourcemanager_diwali_qrd_sku1.xml
-vendor/etc/audio/sku_parrot/resourcemanager_upd.xml
-vendor/etc/audio/sku_parrot_qssi/audio_policy_configuration.xml
-vendor/etc/audio/sku_taro/audio_effects.conf
-vendor/etc/audio/sku_taro/audio_effects.xml
-vendor/etc/audio/sku_taro/mixer_paths.xml
-vendor/etc/audio/sku_taro/mixer_paths_waipio_cdp.xml
-vendor/etc/audio/sku_taro/mixer_paths_waipio_mtp.xml
-vendor/etc/audio/sku_taro/mixer_paths_waipio_qrd.xml
-vendor/etc/audio/sku_taro/resourcemanager.xml
-vendor/etc/audio/sku_taro/resourcemanager_upd.xml
-vendor/etc/audio/sku_taro/resourcemanager_waipio_cdp.xml
-vendor/etc/audio/sku_taro/resourcemanager_waipio_mtp.xml
-vendor/etc/audio/sku_taro/resourcemanager_waipio_qrd.xml
-vendor/etc/audio/sku_taro_qssi/audio_policy_configuration.xml
 vendor/etc/a2dpsink_audio_policy_configuration.xml
 vendor/etc/audio_effects.xml
 vendor/etc/audio_effects_sec.xml
 vendor/etc/audio_effects_spatializer.xml
-vendor/etc/audio_policy_configuration.xml
 vendor/etc/audio_policy_configuration_base.xml
 vendor/etc/audio_policy_configuration_sec.xml
-vendor/etc/audio_policy_volumes.xml
-vendor/etc/bluetooth_audio_policy_configuration.xml
 vendor/etc/bluetooth_qti_audio_policy_configuration.xml
 vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
-vendor/etc/default_volume_tables.xml
 vendor/etc/hearing_aid_audio_policy_configuration.xml
-vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/situation_audio_policy_volumes_sec.xml
-vendor/etc/usb_audio_policy_configuration.xml
 
 # Automotive
 vendor/lib/vendor.qti.hardware.automotive.vehicle@1.0.so
@@ -953,7 +899,6 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 # DSP
 vendor/bin/dspservice
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
-vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
@@ -999,13 +944,6 @@ vendor/lib/vendor.qti.gnss-V1-ndk_platform.so
 vendor/lib/vendor.qti.gnss-service.so
 vendor/lib64/vendor.qti.gnss-V1-ndk_platform.so
 vendor/lib64/vendor.qti.gnss-service.so
-
-# GNSS configs
-vendor/etc/gps.conf
-vendor/etc/izat.conf
-vendor/etc/lowi.conf
-vendor/etc/sap.conf
-vendor/etc/xtwifi.conf
 
 # Health
 vendor/bin/hw/android.hardware.health@2.1-service-samsung
@@ -1225,7 +1163,6 @@ system_ext/lib/vendor.qti.qspmhal-V1-ndk.so
 system_ext/lib/vendor.qti.qspmhal@1.0.so
 system_ext/lib64/vendor.qti.qspmhal-V1-ndk.so
 system_ext/lib64/vendor.qti.qspmhal@1.0.so
-vendor/etc/seccomp_policy/qspm.policy
 vendor/lib/vendor.qti.qspmhal@1.0.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
 
@@ -1276,7 +1213,6 @@ vendor/etc/init/netmgrd.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
 vendor/etc/init/vendor.qti.tftp.rc
-vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/lib/libqrtr.so
 vendor/lib64/libqrtr.so
 vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so
@@ -1323,7 +1259,6 @@ system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 vendor/etc/init/ims_rtp_daemon.rc
-vendor/etc/seccomp_policy/imsrtp.policy
 vendor/lib/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib/com.qualcomm.qti.imscmservice@2.0.so
 vendor/lib/com.qualcomm.qti.imscmservice@2.1.so
@@ -1451,8 +1386,6 @@ vendor/etc/sensors/config/waipio_lsm6dso_0_0.json
 vendor/etc/sensors/config/waipio_power_0.json
 vendor/etc/sensors/config/waipio_veml3235_0.json
 vendor/etc/sensors/config/waipio_veml3235_1.json
-vendor/etc/sensors/hals.conf
-vendor/etc/sensors/sns_reg_config
 
 # Service tracker
 vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
@@ -1553,21 +1486,10 @@ vendor/lib64/libwifi-hal-qcom.so
 
 # Wi-Fi configs
 vendor/etc/wifi/icm.conf
-vendor/etc/wifi/indoorchannel.info
-vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/vendor_cmd.xml
 vendor/etc/wifi/wpa_supplicant.conf
-vendor/etc/wifi/wpa_supplicant_overlay.conf
-
-# Wi-Fi firmware
-vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
 
 # Miscellaneous
-vendor/apex/com.samsung.android.authfw.ta.preload.apex
-vendor/apex/com.samsung.android.biometrics.face.signed.apex
-vendor/apex/com.samsung.android.biometrics.fingerprint.signed.apex
-vendor/apex/com.samsung.android.camera.qciq.signed.apex
-vendor/apex/com.samsung.android.camera.unihal.signed.apex
 vendor/app/CACertService/CACertService.apk
 vendor/app/com.qualcomm.qti.gpudrivers.taro.api32/com.qualcomm.qti.gpudrivers.taro.api32.apk
 vendor/bin/hw/capabilityconfigstoretest
@@ -1602,7 +1524,6 @@ vendor/bin/hw/vendor.samsung.hardware.tlc.kg-service
 vendor/bin/hw/vendor.samsung.hardware.tlc.ucm@2.0-service
 vendor/bin/hw/vendor.samsung.hardware.vibrator-service
 vendor/bin/hw/vendor.samsung.hardware.wifi@2.0-service
-vendor/bin/qmi-framework-tests/qmi_test_mt_client_init_instance
 vendor/bin/PktRspTest
 vendor/bin/StoreKeybox
 vendor/bin/add.pb
@@ -1614,8 +1535,6 @@ vendor/bin/argosd
 vendor/bin/athdiag
 vendor/bin/audioadsprpcd
 vendor/bin/audioflacapp
-vendor/bin/boringssl_self_test32
-vendor/bin/boringssl_self_test64
 vendor/bin/btcoex_cont_config
 vendor/bin/checkpoint_gc
 vendor/bin/cnss_diag
@@ -1693,7 +1612,6 @@ vendor/etc/hyper/config_chipset.json
 vendor/etc/hyper/config_hyper_permission.json
 vendor/etc/hyper/config_vendor.json
 vendor/etc/init/argos.rc
-vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/btcoex_cont_config.rc
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/emservice.rc
@@ -1774,9 +1692,7 @@ vendor/etc/init/vendor.samsung.hardware.wifi@2.0-service.rc
 vendor/etc/init/vendor.sensordebug.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
-vendor/etc/init/vendor_flash_recovery.rc
 vendor/etc/init/vmmgr.rc
-vendor/etc/init/vndservicemanager.rc
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_qcom.rc
 vendor/etc/lm/prekill/prekill_2GB.data
@@ -1851,25 +1767,6 @@ vendor/etc/saiv/personal_1.0/PersonalModel-timestamp
 vendor/etc/saiv/personal_1.0/PhotoParsing5_AF_FACE_128_DSP_iter_136589_v2.2_q.dlc
 vendor/etc/saiv/personal_1.0/PhotoParsing5_AWB_FACE_256_DSP_iter_495623_v2.0_q.dlc
 vendor/etc/saiv/personal_1.0/PhotoParsing6_AWB_FACE_256_DSP_iter_300000_v2.4_q.dlc
-vendor/etc/seccomp_policy/c2audio.vendor.base-arm.policy
-vendor/etc/seccomp_policy/c2audio.vendor.base-arm64.policy
-vendor/etc/seccomp_policy/c2audio.vendor.ext-arm.policy
-vendor/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy
-vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
-vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
-vendor/etc/seccomp_policy/gnss@2.0-base.policy
-vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
-vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
-vendor/etc/seccomp_policy/gnss@2.0-xtwifi-inet-agent.policy
-vendor/etc/seccomp_policy/mediaextractor_sec.policy
-vendor/etc/seccomp_policy/modemManager.policy
-vendor/etc/seccomp_policy/qapeservice.policy
-vendor/etc/seccomp_policy/qesdk.policy
-vendor/etc/seccomp_policy/qti-systemd.policy
-vendor/etc/seccomp_policy/qvr@2.0.policy
-vendor/etc/seccomp_policy/samsung.software.media.c2-base-policy
-vendor/etc/seccomp_policy/samsung.software.media.c2-ext-policy
-vendor/etc/seccomp_policy/sxr@2.0.policy
 vendor/etc/secnvm/k250a_47000301_0.img
 vendor/etc/secnvm/k250a_47000304_c.img
 vendor/etc/secnvm/k250a_47000306_1.img
@@ -1892,7 +1789,6 @@ vendor/etc/singletake/jumpshot/ActionShotPosture.dlc
 vendor/etc/singletake/saliency/FixPNet.dlc
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
-vendor/etc/sysconfig/vendor-apex-allowlist.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/etc/vintf/manifest/deviceManifest.xml
 vendor/etc/vintf/manifest/engmode_manifest.xml
@@ -1926,9 +1822,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.kg-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.wifi.hostapd.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.wifi@2.0-service.xml
-vendor/etc/vintf/manifest_cape.xml
-vendor/etc/vintf/manifest_diwali.xml
-vendor/etc/vintf/manifest_taro.xml
 vendor/etc/DsgpPolicy.csv
 vendor/etc/IPACM_Filter_cfg.xml
 vendor/etc/SoundBoosterParam.txt
@@ -1937,24 +1830,18 @@ vendor/etc/btcon.json
 vendor/etc/cacert_location.pem
 vendor/etc/card-defs.xml
 vendor/etc/dax3_media_codecs_dolby_audio.xml
-vendor/etc/dpolicy
 vendor/etc/floating_feature.xml
-vendor/etc/fstab.qcom
-vendor/etc/fstab.ramplus
 vendor/etc/gnss_antenna_info.conf
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/hdr_samsung_mx.key
 vendor/etc/hqm_device.xml
-vendor/etc/linker.config.pb
 vendor/etc/mercury.json
 vendor/etc/microphone_characteristics.xml
 vendor/etc/mixer_usb_default.xml
 vendor/etc/mixer_usb_gray.xml
-vendor/etc/mkshrc
 vendor/etc/msm_irqbalance.conf
 vendor/etc/public.libraries.txt
 vendor/etc/qguard.json
-vendor/etc/recovery-resource.dat
 vendor/etc/sec_audio_volume_curve.xml
 vendor/etc/sec_config
 vendor/etc/smomo_setting.xml
@@ -3230,4 +3117,3 @@ vendor/saiv/swisp_1.0/db/denoise_model_e374_832X1088X4.dlc
 vendor/saiv/swisp_1.0/db/denoise_model_e734_832x1072x4_PRECONV.pb
 vendor/saiv/swisp_1.0/db/denoise_model_e89_832X1088X4_v9_1_IS_C3P123_v8_2ref_SC_ELL_v2.dlc
 vendor/saiv/swisp_1.0/db/denoise_model_e972_832X1072X4_v9_1_IS_C3P123_v8_2ref_SC_ELL_v2.pb
-vendor/ueventd.rc
