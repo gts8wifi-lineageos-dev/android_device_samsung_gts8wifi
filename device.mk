@@ -93,6 +93,12 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
     android.hardware.health-service.samsung-recovery
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    IPACM_Filter_cfg.xml
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
