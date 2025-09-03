@@ -154,6 +154,7 @@ VENDOR_SECURITY_PATCH := 2025-07-01
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(DEVICE_PATH)/configs/vintf/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
