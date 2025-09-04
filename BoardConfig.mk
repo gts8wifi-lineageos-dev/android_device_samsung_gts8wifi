@@ -63,11 +63,11 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 
 # Kernel
-BOARD_BOOTIMG_HEADER_VERSION := 4
+BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 printk.devkmsg=on firmware_class.path=/vendor/firmware_mnt/image console=null bootconfig loop.max_part=7
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
@@ -79,6 +79,23 @@ TARGET_KERNEL_CONFIG := vendor/waipio-gki_defconfig \
 TARGET_KERNEL_SOURCE := kernel/samsung/sm8450
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     PROJECT_NAME=gts8wifi
+
+BOARD_VENDOR_RAMDISK_FRAGMENTS := dlkm
+BOARD_VENDOR_RAMDISK_FRAGMENT.dlkm.KERNEL_MODULE_DIRS := top
+
+# Kernel modules
+first_stage_modules := $(strip $(shell cat $(TARGET_KERNEL_SOURCE)/modules.list.msm.waipio))
+second_stage_modules := $(strip $(shell cat $(DEVICE_PATH)/modules.list.second_stage))
+vendor_dlkm_exclusive_modules := $(strip $(shell cat $(DEVICE_PATH)/modules.list.vendor_dlkm))
+
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD += $(first_stage_modules)
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD += $(first_stage_modules) $(second_stage_modules)
+BOARD_VENDOR_KERNEL_MODULES_LOAD += $(second_stage_modules) $(vendor_dlkm_exclusive_modules)
+
+BOOT_KERNEL_MODULES += $(first_stage_modules) $(second_stage_modules)
+
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(TARGET_KERNEL_SOURCE)/modules.vendor_blocklist.msm.waipio
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE)
 
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8450-modules
 TARGET_KERNEL_EXT_MODULES := \
@@ -174,6 +191,8 @@ BOARD_AVB_VENDOR_BOOT_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_VENDOR_BOOT_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX := 1
 BOARD_AVB_VENDOR_BOOT_ROLLBACK_INDEX_LOCATION := 1
+
+BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 
 # Wi-Fi
 BOARD_WLAN_DEVICE := qcwcn
