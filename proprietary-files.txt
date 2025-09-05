@@ -1814,7 +1814,7 @@ vendor/lib/lib_SoundBooster_ver1050.so
 vendor/lib/libadm.so
 vendor/lib/libadreno_app_profiles.so
 vendor/lib/libadreno_utils.so
-vendor/lib/libagm.so
+# vendor/lib/libagm.so
 # vendor/lib/libagmmixer.so
 vendor/lib/libaidenoiser.so
 vendor/lib/libaivideocentral.arcsoft.so
@@ -2254,7 +2254,7 @@ vendor/lib64/lib_SoundBooster_ver1050.so
 vendor/lib64/libadm.so
 vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadreno_utils.so
-vendor/lib64/libagm.so
+# vendor/lib64/libagm.so
 # vendor/lib64/libagmmixer.so
 vendor/lib64/libai_denoiser_interface.so
 vendor/lib64/libaidenoiser.so
