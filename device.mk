@@ -33,20 +33,37 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl \
+    vendor.qti.hardware.AGMIPC@1.0-service \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usbv2.default \
+    agmcap \
+    agmcompressplay \
+    agmplay \
+    libagmclient \
     libagm_compress_plugin \
     libagm_mixer_plugin \
+    libagmmixer \
     libagm_pcm_plugin \
+    libar-acdb \
+    libar-gpr \
+    libar-gsl \
+    libar-pal \
     libats \
     libaudiochargerlistener \
     libbatterylistener \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle \
     libfmpal \
     libhfp_pal \
+    liblx-osal \
+    liblx-ar_util \
+    libpalclient \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
+    libsndcardparser \
     libvolumelistener
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8450/audio/primary-hal
@@ -89,6 +106,9 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh \
     libgpu_tonemapper \
+    libdisplaydebug \
+    libdisplayconfig.qti \
+    libsdmutils \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer3-V1-ndk.vendor \
     vendor.qti.hardware.display.composer-service \
@@ -96,7 +116,43 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer-service.xml \
     vendor.qti.hardware.display.config-V2-ndk.vendor \
     vendor.qti.hardware.display.demura-service \
-    vendor.qti.hardware.display.demura-V1-ndk.vendor
+    vendor.qti.hardware.display.demura-V1-ndk.vendor \
+    vendor.display.config@1.5 \
+    vendor.display.config@1.9 \
+    vendor.display.config@1.11 \
+    vendor.display.config@1.14 \
+    vendor.display.config@2.0 \
+    vendor.display.config@1.0.vendor \
+    vendor.display.config@1.1.vendor \
+    vendor.display.config@1.2.vendor \
+    vendor.display.config@1.3.vendor \
+    vendor.display.config@1.4.vendor:64 \
+    vendor.display.config@1.5.vendor:64 \
+    vendor.display.config@1.6.vendor:64 \
+    vendor.display.config@1.7.vendor:64 \
+    vendor.display.config@1.8.vendor:64 \
+    vendor.display.config@1.8.vendor:64 \
+    vendor.display.config@1.9.vendor:64 \
+    vendor.display.config@1.11.vendor:64 \
+    vendor.display.config@1.12.vendor:64 \
+    vendor.display.config@1.13.vendor:64 \
+    vendor.display.config@1.14.vendor:64 \
+    vendor.display.config@1.16.vendor \
+    vendor.display.config@2.0.vendor:64 \
+    vendor.qti.hardware.display.allocator@3.0.vendor:64 \
+    vendor.qti.hardware.display.allocator@4.0.vendor:64 \
+    vendor.qti.hardware.display.composer@3.0.vendor:64 \
+    vendor.qti.hardware.display.composer@3.1.vendor:64 \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.1.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.2.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.3.vendor \
+    vendor.qti.hardware.display.demura@1.0.vendor \
+    vendor.qti.hardware.display.demura@2.0.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
@@ -173,6 +229,13 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Power
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.0.vendor \
+    vendor.qti.hardware.perf@2.1.vendor \
+    vendor.qti.hardware.perf@2.2.vendor \
+    vendor.qti.hardware.perf@2.3.vendor
 
 # Product characteristics
 PRODUCT_CHARACTERISTICS := tablet
@@ -294,6 +357,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
+    libwifi-hal-qcom \
     libwifi-hal-ctrl \
     WifiOverlay \
     wpa_cli \
