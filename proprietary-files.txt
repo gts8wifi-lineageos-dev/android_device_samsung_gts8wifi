@@ -73,11 +73,6 @@ vendor/lib/rfsa/adsp/libvpp_ais_networks.so
 vendor/lib/rfsa/adsp/libvpp_vqa_networks.so
 vendor/lib/rfsa/adsp/libvpt_action_recognition.so
 
-# Atrace
-vendor/bin/hw/android.hardware.atrace@1.0-service
-vendor/etc/init/android.hardware.atrace@1.0-service.rc
-vendor/etc/vintf/manifest/android.hardware.atrace@1.0-service.xml
-
 # Audio
 vendor/bin/hw/android.hardware.audio.service
 vendor/bin/hw/android.hardware.audio.service_64
@@ -442,11 +437,6 @@ vendor/lib64/camera/w_dual_calibration.bin
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/camera.unihal.default.so
 vendor/lib64/hw/com.qti.chi.override.so
-vendor/lib64/camera.device@1.0-impl.so
-vendor/lib64/camera.device@3.2-impl.so
-vendor/lib64/camera.device@3.3-impl.so
-vendor/lib64/camera.device@3.4-impl.so
-vendor/lib64/camera.device@3.5-impl.so
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.demux.so
 vendor/lib64/com.qti.feature2.derivedoffline.so
@@ -567,11 +557,6 @@ vendor/firmware/CAMERA_ICP.mbn
 vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
 vendor/firmware/CAMERA_ICP_480.elf
-
-# CAS
-vendor/bin/hw/android.hardware.cas@1.2-service-lazy
-vendor/etc/init/android.hardware.cas@1.2-service-lazy.rc
-vendor/etc/vintf/manifest/android.hardware.cas@1.2-service-lazy.xml
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -796,11 +781,8 @@ vendor/lib/vendor.qti.diaghal@1.0.so
 vendor/lib64/vendor.qti.diaghal@1.0.so
 
 # DRM
-vendor/bin/hw/android.hardware.drm@1.4-service.clearkey
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.clearkey.rc
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.clearkey.xml
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib/mediacas/libclearkeycasplugin.so
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
@@ -886,11 +868,6 @@ vendor/lib64/vendor.qti.gnss-V1-ndk_platform.so
 vendor/lib64/vendor.qti.gnss-service.so
 vendor/lib/hw/android.hardware.gnss-aidl-impl-qti.so
 vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
-
-# Health
-vendor/bin/hw/android.hardware.health@2.1-service-samsung
-vendor/etc/init/android.hardware.health@2.1-service-samsung.rc
-vendor/etc/vintf/manifest/android.hardware.health@2.1-samsung.xml
 
 # Identity
 vendor/etc/init/android.hardware.identity-service-qti.rc
@@ -1165,11 +1142,8 @@ vendor/lib64/libskeymint10device.so
 vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so
 
 # Sensors
-vendor/bin/hw/android.hardware.sensors@2.1-service.multihal
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
-vendor/etc/init/android.hardware.sensors@2.1-service-multihal.rc
-vendor/etc/vintf/manifest/android.hardware.sensors@2.1-multihal.xml
 vendor/lib/libsensorslog.so
 vendor/lib/sensors.grip.so
 vendor/lib/sensors.ssc.so
@@ -1431,7 +1405,6 @@ vendor/etc/init/argos.rc
 vendor/etc/init/btcoex_cont_config.rc
 vendor/etc/init/camera.unihal.rc
 vendor/etc/init/emservice.rc
-vendor/etc/init/face-default-sec.rc
 vendor/etc/init/fingerprint_common.rc
 vendor/etc/init/hermesd.rc
 vendor/etc/init/hyper-default-sec.rc
@@ -1605,7 +1578,6 @@ vendor/etc/ssg/tz_whitelist.json
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/etc/vintf/manifest/deviceManifest.xml
 vendor/etc/vintf/manifest/engmode_manifest.xml
-vendor/etc/vintf/manifest/face-default-sec.xml
 vendor/etc/vintf/manifest/hyper-default-sec.xml
 vendor/etc/vintf/manifest/iweaver_v1_manifest.xml
 vendor/etc/vintf/manifest/lights-default-sec.xml
@@ -1625,7 +1597,6 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.securesnap-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.fkeymaster-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hdcp.wifidisplay-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.widevine.keyprov-service.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.snap-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.ddar@1.0-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.hdm@1.1-manifest.xml
