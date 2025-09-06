@@ -15,5 +15,3 @@ allow factory_ssc efs_file:file create_file_perms;
 allow factory_ssc sec_efs_file:dir r_dir_perms;
 
 set_prop(factory_ssc, vendor_sensors_prop)
-
-dontaudit factory_ssc default_prop:file { getattr map open read };
