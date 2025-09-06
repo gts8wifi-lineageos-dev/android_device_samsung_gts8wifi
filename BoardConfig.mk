@@ -164,6 +164,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Security patch level
 VENDOR_SECURITY_PATCH := 2025-07-01
 
+# Sepolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/vintf/device_framework_matrix.xml \
