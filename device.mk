@@ -207,11 +207,28 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
     android.hardware.health-service.samsung-recovery
 
+# Input configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/idc/sec_e-pen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_e-pen.idc \
+    $(LOCAL_PATH)/configs/idc/certify_hall.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/certify_hall.idc \
+    $(LOCAL_PATH)/configs/idc/flip1.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/flip1.idc \
+    $(LOCAL_PATH)/configs/idc/flip2.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/flip2.idc \
+    $(LOCAL_PATH)/configs/idc/hall.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/hall.idc \
+    $(LOCAL_PATH)/configs/idc/hall_logical.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/hall_logical.idc \
+    $(LOCAL_PATH)/configs/idc/hall_wacom.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/hall_wacom.idc \
+    $(LOCAL_PATH)/configs/idc/wacom_hall.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/wacom_hall.idc
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
     IPACM_Filter_cfg.xml
+
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/Generic_internal.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Generic_internal.kl \
+    $(LOCAL_PATH)/keylayout/Vendor_0075_Product_0100.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0075_Product_0100.kl \
+    $(LOCAL_PATH)/keylayout/Vendor_04e8.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_04e8.kl
 
 # Keymint
 PRODUCT_PACKAGES += \
