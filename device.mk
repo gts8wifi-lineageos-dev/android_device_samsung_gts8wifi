@@ -226,9 +226,9 @@ PRODUCT_PACKAGES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/Generic_internal.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Generic_internal.kl \
-    $(LOCAL_PATH)/keylayout/Vendor_0075_Product_0100.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0075_Product_0100.kl \
-    $(LOCAL_PATH)/keylayout/Vendor_04e8.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_04e8.kl
+    $(LOCAL_PATH)/configs/keylayout/Generic_internal.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Generic_internal.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_0075_Product_0100.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0075_Product_0100.kl \
+    $(LOCAL_PATH)/configs/keylayout/Vendor_04e8.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_04e8.kl
 
 # Keymint
 PRODUCT_PACKAGES += \
