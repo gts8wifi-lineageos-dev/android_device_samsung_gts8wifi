@@ -12,7 +12,6 @@ debug.c2.use_dmabufheaps=1
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.disable_backpressure=1
-debug.sf.disable_client_composition_cache=1
 debug.sf.early_app_phase_offset_ns=100000
 debug.sf.early_gl_app_phase_offset_ns=100000
 debug.sf.early_gl_phase_offset_ns=100000
