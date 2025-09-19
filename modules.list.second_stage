@@ -302,7 +302,6 @@ sdhci-msm-sec.ko
 sdpm_clk.ko
 sec_ap_pmic.ko
 sec_argos.ko
-sec_arm64_ap_context.ko
 sec_arm64_fsimd_debug.ko
 sec_audio_sysfs.ko
 sec-battery.ko
