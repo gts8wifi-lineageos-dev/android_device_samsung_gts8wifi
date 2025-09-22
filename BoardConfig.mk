@@ -91,6 +91,8 @@ TARGET_KERNEL_CONFIG := vendor/waipio-gki_defconfig \
 TARGET_KERNEL_SOURCE := kernel/samsung/sm8450
 TARGET_KERNEL_ADDITIONAL_FLAGS := \
     PROJECT_NAME=gts8wifi
+TARGET_KERNEL_CLANG_VERSION := r416183b
+TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(DEVICE_PATH)/modules.blocklist
