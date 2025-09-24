@@ -71,15 +71,23 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 # Kernel
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
+    hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.selinux=permissive
 
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 printk.devkmsg=on firmware_class.path=/vendor/firmware_mnt/image console=null bootconfig loop.max_part=7
+BOARD_KERNEL_CMDLINE := video=vfb:640x400,bpp=32,memsize=3072000 printk.devkmsg=on firmware_class.path=/vendor/firmware_mnt/image console=null loop.max_part=7
 BOARD_KERNEL_PAGESIZE := 4096
+BOARD_DTB_OFFSET := 0x01f00000
+BOARD_RAMDISK_OFFSET := 0x02000000
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+BOARD_BOOT_HEADER_NAME := SRPUI09A009
+BOARD_MKBOOTIMG_ARGS += --board $(BOARD_BOOT_HEADER_NAME)
+BOARD_MKBOOTIMG_ARGS += --tags_offset 0x01e00000
+BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
+BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
