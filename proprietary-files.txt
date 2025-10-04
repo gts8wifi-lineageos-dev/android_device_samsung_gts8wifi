@@ -274,8 +274,6 @@ vendor/lib/libcom.qti.chinodeutils.so
 vendor/lib/libDepthBokehVideo_interface.so
 vendor/lib/libdualcam_refocus_video.so
 vendor/lib/libgui_vendor.so
-vendor/lib/libhdrdynamic.so
-vendor/lib/libhdrdynamicootf.so
 vendor/lib/libmpbase.so
 vendor/lib/libsnsapi.so
 vendor/lib/libsnsdiaglog.so
@@ -749,6 +747,11 @@ vendor/lib64/vendor.qti.hardware.display.config-V4-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.display.config-V5-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.display.config-V6-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+
+# Display HDR - from ingot-user 14 UKQ1.240227.165 release-keys
+vendor/lib64/libgame_enhance.so|4432e47d990e98edb141becc345a92d03df26bf4
+vendor/lib64/libhdr_backlight_adapter.so|57036c19938fe40e73e9b9e3d4c6a6073d7aa858
+vendor/lib64/libhdr_tm.so|6f18ddbd3f66f4348a5b92a2ac0bafd979ed2a05
 
 # Display HWC - from ingot-user 14 UKQ1.240227.165 release-keys
 vendor/bin/qdcmss|727147cbaf4d74f0eb38c534fda9beebdfec31f6
@@ -1835,7 +1838,6 @@ vendor/lib/libcneapiclient.so
 vendor/lib/libcneoplookup.so
 vendor/lib/libcneqmiutils.so
 vendor/lib/libcodecsolutionhelper_vendor.so
-vendor/lib/libcolor-default.so
 vendor/lib/libconfigdb.so
 vendor/lib/libcv_common.so
 vendor/lib/libcvp2_1.so
@@ -1865,7 +1867,6 @@ vendor/lib/libfastcrc.so
 vendor/lib/libfidoauthnr_v2.so
 vendor/lib/libfloatingfeature.so
 vendor/lib/libformatConverter.unifunc.so
-vendor/lib/libgame_enhance.so
 vendor/lib/libgaya.so
 vendor/lib/libgeofencing.so
 vendor/lib/libgf_in_system_lib.so
@@ -1880,8 +1881,6 @@ vendor/lib/libhdcp1prov.so
 vendor/lib/libhdcp2p2prov.so
 vendor/lib/libhdcpsrm.so
 vendor/lib/libhdr10plus.so
-vendor/lib/libhdr_backlight_adapter.so
-vendor/lib/libhdr_tm.so
 vendor/lib/libhdradaptivecustom.so
 vendor/lib/libhermes.so
 vendor/lib/libhypermotion_core.so
@@ -2322,7 +2321,6 @@ vendor/lib64/libfastcrc.so
 vendor/lib64/libfidoauthnr_v2.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libformatConverter.unifunc.so
-vendor/lib64/libgame_enhance.so
 vendor/lib64/libgeofencing.so
 vendor/lib64/libgf_in_system_lib.so
 vendor/lib64/libgnss.so
@@ -2336,9 +2334,7 @@ vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
 vendor/lib64/libhdr10plus.so
-vendor/lib64/libhdr_backlight_adapter.so
 vendor/lib64/libhdr_backlight_adapter_qti.so
-vendor/lib64/libhdr_tm.so
 vendor/lib64/libhdradaptivecustom.so
 vendor/lib64/libhdraid.gpu.arcsoft.so
 vendor/lib64/libhdraid.npu.arcsoft.so
