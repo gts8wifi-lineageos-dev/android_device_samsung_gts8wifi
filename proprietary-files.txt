@@ -895,6 +895,7 @@ vendor/lib64/vendor.qti.gnss-V1-ndk_platform.so
 vendor/lib64/vendor.qti.gnss-service.so
 vendor/lib/hw/android.hardware.gnss-aidl-impl-qti.so
 vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so
+vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so
 
 # Identity
 vendor/etc/init/android.hardware.identity-service-qti.rc
