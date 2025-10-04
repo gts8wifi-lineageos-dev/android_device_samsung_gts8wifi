@@ -55,8 +55,13 @@ TARGET_SCREEN_DENSITY := 340
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 BOARD_ROOT_EXTRA_FOLDERS += \
+    carrier \
     efs \
-    metadata
+    metadata \
+    misc \
+    optics \
+    prism \
+    spu
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
