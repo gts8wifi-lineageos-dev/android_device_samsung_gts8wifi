@@ -30,7 +30,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl \
-    vendor.qti.hardware.AGMIPC@1.0-service \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usbv2.default \
@@ -45,7 +44,6 @@ PRODUCT_PACKAGES += \
     libar-acdb \
     libar-gpr \
     libar-gsl \
-    libar-pal \
     libats \
     libaudiochargerlistener \
     libbatterylistener \
@@ -53,7 +51,6 @@ PRODUCT_PACKAGES += \
     lib_bt_ble \
     lib_bt_bundle \
     libfmpal \
-    libhfp_pal \
     liblx-osal \
     liblx-ar_util \
     libpalclient \
