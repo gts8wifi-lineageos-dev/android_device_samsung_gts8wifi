@@ -85,6 +85,9 @@ blob_fixups: blob_fixups_user_type = {
 
      'vendor/lib64/libSecC2ComponentStore.so': blob_fixup()
         .add_needed('libshim_c2.so'),
+
+     'vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so': blob_fixup()
+        .add_needed('libcamera_provider_shim.so'),
 }
 
 module = ExtractUtilsModule(
