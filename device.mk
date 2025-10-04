@@ -58,7 +58,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libsndcardparser \
-    libvolumelistener
+    libvolumelistener \
+    vendor.qti.hardware.AGMIPC@1.0-service
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8450/audio/primary-hal
 AUDIO_PAL_DIR := hardware/qcom-caf/sm8450/audio/pal
