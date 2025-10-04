@@ -19,6 +19,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'device/samsung/gts8wifi',
     'vendor/samsung/gts8wifi',
     'vendor/qcom/opensource/display',
     'hardware/qcom-caf/sm8450',
@@ -86,12 +87,16 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/libSecC2ComponentStore.so': blob_fixup()
         .add_needed('libshim_c2.so'),
 
-     'vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so': blob_fixup()
+     ('vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so',
+      'vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so',
+      'vendor/lib64/camx.device@3.2-impl.so',
+      'vendor/lib64/camx.device@3.4-impl.so'): blob_fixup()
         .add_needed('libcamera_provider_shim.so'),
 
     ('vendor/lib64/libmpp_common_vendor.so',
      'vendor/lib64/libc2filterplugin.so',
-     'vendor/lib64/unihal_android.so'): blob_fixup()
+     'vendor/lib64/unihal_android.so',
+     'vendor/lib/libapex_cmn.so'): blob_fixup()
         .add_needed('libui_shim.so'),
 }
 
