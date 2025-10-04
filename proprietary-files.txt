@@ -750,6 +750,19 @@ vendor/lib64/vendor.qti.hardware.display.config-V5-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.display.config-V6-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
+# Display HWC - from ingot-user 14 UKQ1.240227.165 release-keys
+vendor/bin/qdcmss|727147cbaf4d74f0eb38c534fda9beebdfec31f6
+vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
+vendor/lib64/libbacklight-calib.so|a5990fa87932196f9e2c38b2ec85786daa6b3a9c
+vendor/lib64/libdigital-dimming.so|66506a386dc80da0994c9d4aeac34edfc1830c5c
+vendor/lib64/libdpps.so|d8e9cc561a3ab706697880975413db23bb41640c
+vendor/lib64/libmemutils.so|e122c3ff95b10a6263e698261abafe62cee98010
+vendor/lib64/libqdcm-algo.so|e873dc21878d92d20f6937453c9d3265a0d3a93d
+vendor/lib64/libqdcm-json-mode-parser.so|1c8f1a841a877efbed0a0b3db3d551ff1283f14f
+vendor/lib64/libqdcm-mode-parser.so|341178dfb18e03b6fabff27a080fb96f15188942
+vendor/lib64/libsnapdragoncolor-manager.so|72291478bd56bada0fc3df3617e765b28ef54f66
+vendor/lib64/libsnapdragoncolor-qdcm.so|9f0bc72290618324e95cd9f4eca6987a6733bd06
+
 # Display SDM - from ingot-user 14 UKQ1.240227.165 release-keys
 vendor/etc/display/DPU660.xml|b26dd73e361546d89bf3d7082a471703dc6ac2cb
 vendor/etc/display/DPU670.xml|e5131a60ceff29ca5eb561eec7eddadef1d0486f
@@ -1374,7 +1387,6 @@ vendor/bin/pm-service
 vendor/bin/pmic_key_reset
 vendor/bin/ppd
 vendor/bin/qcom-system-daemon
-vendor/bin/qdcmss
 vendor/bin/qseecom_sample_client
 vendor/bin/sec_nvm
 vendor/bin/shsusrd
@@ -1443,7 +1455,6 @@ vendor/etc/init/pa_daemon_qsee.rc
 vendor/etc/init/power-default-sec.rc
 vendor/etc/init/poweropt-service.rc
 vendor/etc/init/qapeservice.rc
-vendor/etc/init/qdcmss.rc
 vendor/etc/init/qguard.rc
 vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/qmipriod.rc
@@ -1832,7 +1843,6 @@ vendor/lib/libcvpcpuRev_skel.so
 vendor/lib/libdataitems.so
 vendor/lib/libdiagjni.so
 vendor/lib/libdisp-aba.so
-vendor/lib/libdpps.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libdsd2pcm.so
@@ -1975,9 +1985,6 @@ vendor/lib/libqcodec2_mockqc2filter.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
-vendor/lib/libqdcm-algo.so
-vendor/lib/libqdcm-json-mode-parser.so
-vendor/lib/libqdcm-mode-parser.so
 vendor/lib/libqdi.so
 vendor/lib/libqdma_file_agent.so
 vendor/lib/libqdp.so
@@ -2044,8 +2051,6 @@ vendor/lib/libsn220u_fw.so
 vendor/lib/libsnaace.so
 vendor/lib/libsnamrnb.so
 vendor/lib/libsnamrwb.so
-vendor/lib/libsnapdragoncolor-manager.so
-vendor/lib/libsnapdragoncolor-qdcm.so
 # vendor/lib/libsndcardparser.so
 vendor/lib/libsns_direct_channel_stub.so
 vendor/lib/libsns_registry_skel.so
@@ -2287,7 +2292,6 @@ vendor/lib64/libdataitems.so
 vendor/lib64/libdiagjni.so
 vendor/lib64/libdisp-aba.so
 vendor/lib64/libdk_vnd_service_core.so
-vendor/lib64/libdpps.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libdsd2pcm.so
@@ -2470,9 +2474,6 @@ vendor/lib64/libqcodec2_mockqc2filter.so
 vendor/lib64/libqcodec2_platform.so
 vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
-vendor/lib64/libqdcm-algo.so
-vendor/lib64/libqdcm-json-mode-parser.so
-vendor/lib64/libqdcm-mode-parser.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdma_file_agent.so
 vendor/lib64/libqdp.so
@@ -2550,8 +2551,6 @@ vendor/lib64/libsnap_compute_wrapper.so
 vendor/lib64/libsnap_compute_wrapper_secure.so
 vendor/lib64/libsnap_vndk.so
 vendor/lib64/libsnap_vndk_secure.so
-vendor/lib64/libsnapdragoncolor-manager.so
-vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/libsnaplite_native.so
 vendor/lib64/libsnaplite_native_secure.so
 vendor/lib64/libsnaplite_wrapper.so
@@ -2733,6 +2732,4 @@ vendor/saiv/swisp_1.0/db/denoise_model_e374_832X1088X4.dlc
 vendor/saiv/swisp_1.0/db/denoise_model_e734_832x1072x4_PRECONV.pb
 vendor/saiv/swisp_1.0/db/denoise_model_e89_832X1088X4_v9_1_IS_C3P123_v8_2ref_SC_ELL_v2.dlc
 vendor/saiv/swisp_1.0/db/denoise_model_e972_832X1072X4_v9_1_IS_C3P123_v8_2ref_SC_ELL_v2.pb
-vendor/lib/libdigital-dimming.so
-vendor/lib64/libdigital-dimming.so
 vendor/lib64/libc++_shared.so
