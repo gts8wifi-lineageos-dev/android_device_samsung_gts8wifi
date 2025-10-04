@@ -64,9 +64,23 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so'): blob_fixup()
         .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so', 'android.hardware.security.keymint-V4-ndk.so')
         .replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so', 'android.hardware.security.secureclock-V1-ndk.so')
-        .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so', 'android.hardware.security.sharedsecret-V1-ndk.so'),
+        .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so', 'android.hardware.security.sharedsecret-V1-ndk.so')
+        .add_needed('android.hardware.security.rkp-V3-ndk.so')
+        .replace_needed('libcrypto.so', 'libcrypto-v33.so')
+        .replace_needed('libcppbor_external.so', 'libcppbor.so'),
 
-    'vendor/bin/hw/vendor.samsung.hardware.hyper-service': blob_fixup()
+    ('vendor/lib64/hw/gatekeeper.mdfpp.so',
+     'vendor/lib64/libqtikeymaster4.so',
+     'vendor/lib64/libkeymasterutils.so',
+     'vendor/lib64/libengmode15.so',
+     'vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so',
+     'vendor/lib64/libkeymasterdeviceutils.so',
+     'vendor/lib64/libspcom.so',
+     'vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti',
+     'vendor/bin/vendor.samsung.hardware.security.fkeymaster-service'): blob_fixup()
+        .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
+
+     'vendor/bin/hw/vendor.samsung.hardware.hyper-service': blob_fixup()
         .replace_needed('libhyper.so', 'libhyper_vendor.so'),
 }
 
