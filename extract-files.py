@@ -55,6 +55,8 @@ lib_fixups: lib_fixups_user_type = {
         'lib_bt_bundle',
         'libpalclient',
         'vendor.qti.hardware.pal@1.0-impl',
+        'vendor.qti.hardware.AGMIPC@1.0-impl',
+        'vendor.qti.hardware.AGMIPC@1.0',
     ): lib_fixup_remove,
 }
 
