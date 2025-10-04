@@ -1379,12 +1379,10 @@ vendor/bin/thermal-engine-v2
 vendor/bin/time_client
 vendor/bin/ubwcconvert
 vendor/bin/utility_cache_test.tflite
-vendor/bin/vaultkeeperd
 vendor/bin/vendor.samsung.hardware.security.engmode@1.0-service
 vendor/bin/vendor.samsung.hardware.security.fkeymaster-service
 vendor/bin/vendor.samsung.hardware.security.hdcp.wifidisplay-service
 vendor/bin/vendor.samsung.hardware.security.proca@2.0-service
-vendor/bin/vendor.samsung.hardware.security.vaultkeeper@2.0-service
 vendor/bin/vmmgr
 vendor/bin/wvkprov
 vendor/etc/VslMesDetector/MesDetectorBlur.tflite
@@ -1447,7 +1445,6 @@ vendor/etc/init/snap_utility.rc
 vendor/etc/init/snaplite_utility.rc
 vendor/etc/init/sxrd.rc
 vendor/etc/init/trusteduilistener.rc
-vendor/etc/init/vaultkeeper_common.rc
 vendor/etc/init/vendor.qti.audio-adsprpc-service.rc
 vendor/etc/init/vendor.qti.diag.rc
 vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
@@ -1588,7 +1585,6 @@ vendor/etc/vintf/manifest/power-samsung.xml
 vendor/etc/vintf/manifest/radio_manifest_wifionly.xml
 vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml
 vendor/etc/vintf/manifest/secaudiohalaidl_manifest.xml
-vendor/etc/vintf/manifest/vaultkeeper_manifest.xml
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.authfw@1.0-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.xml
@@ -2682,7 +2678,6 @@ vendor/lib64/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0.so
 vendor/lib64/vendor.samsung.hardware.security.hdcp.wifidisplay-V2-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.security.skpm@1.0.so
-vendor/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so
 vendor/lib64/vendor.samsung.hardware.security.widevine.keyprov-V1-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.snap-V1-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.sysinput@1.0.so
