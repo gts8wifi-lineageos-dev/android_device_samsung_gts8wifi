@@ -45,6 +45,8 @@ TARGET_PROVIDES_AUDIO_HAL := true
 TARGET_PROVIDES_LIBAR_PAL := true
 TARGET_USES_QCOM_MM_AUDIO := true
 
+$(call soong_config_set, android_hardware_audio, run_64bit, true)
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := taro
 TARGET_NO_BOOTLOADER := true

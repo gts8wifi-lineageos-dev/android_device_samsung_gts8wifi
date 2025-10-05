@@ -25,7 +25,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.1-impl \
+    android.hardware.audio@7.0-impl \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
@@ -33,27 +33,15 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usbv2.default \
-    agmcap \
-    agmcompressplay \
-    agmplay \
-    libagmclient \
     libagm_compress_plugin \
     libagm_mixer_plugin \
-    libagmmixer \
     libagm_pcm_plugin \
-    libar-acdb \
-    libar-gpr \
-    libar-gsl \
-    libats \
     libaudiochargerlistener \
     libbatterylistener \
     lib_bt_aptx \
     lib_bt_ble \
     lib_bt_bundle \
     libfmpal \
-    liblx-osal \
-    liblx-ar_util \
-    libpalclient \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \

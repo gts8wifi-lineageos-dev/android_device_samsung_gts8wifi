@@ -74,35 +74,11 @@ vendor/lib/rfsa/adsp/libvpp_vqa_networks.so
 vendor/lib/rfsa/adsp/libvpt_action_recognition.so
 
 # Audio
-vendor/bin/hw/android.hardware.audio.service
-vendor/bin/hw/android.hardware.audio.service_64
-vendor/etc/init/android.hardware.audio.service.rc
-vendor/etc/init/android.hardware.audio.service_64.rc
-vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so
-vendor/lib/hw/android.hardware.audio.effect@4.0-impl.so
-vendor/lib/hw/android.hardware.audio.effect@5.0-impl.so
-vendor/lib/hw/android.hardware.audio.effect@6.0-impl.so
-vendor/lib/hw/android.hardware.audio.effect@7.0-impl.so
-vendor/lib/hw/android.hardware.audio@2.0-impl.so
-vendor/lib/hw/android.hardware.audio@4.0-impl.so
-vendor/lib/hw/android.hardware.audio@5.0-impl.so
-vendor/lib/hw/android.hardware.audio@6.0-impl.so
-vendor/lib/hw/android.hardware.audio@7.0-impl.so
 vendor/lib/hw/audio.primary.default.so
 vendor/lib/hw/audio.primary.taro.so
 vendor/lib/hw/audio.r_submix.default.so
 vendor/lib/hw/audio.usb.default.so
 vendor/lib/libsecaudioinfo.so
-vendor/lib64/hw/android.hardware.audio.effect@2.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@4.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@5.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@6.0-impl.so
-vendor/lib64/hw/android.hardware.audio.effect@7.0-impl.so
-vendor/lib64/hw/android.hardware.audio@2.0-impl.so
-vendor/lib64/hw/android.hardware.audio@4.0-impl.so
-vendor/lib64/hw/android.hardware.audio@5.0-impl.so
-vendor/lib64/hw/android.hardware.audio@6.0-impl.so
-vendor/lib64/hw/android.hardware.audio@7.0-impl.so
 vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.taro.so
 vendor/lib64/hw/audio.r_submix.default.so
@@ -1819,9 +1795,6 @@ vendor/lib/libaidenoiser.so
 vendor/lib/libaivideocentral.arcsoft.so
 vendor/lib/libapex_cmn.so
 vendor/lib/libapex_utils.so
-# vendor/lib/libar-acdb.so
-# vendor/lib/libar-gpr.so
-# vendor/lib/libar-gsl.so;DISABLE_CHECKELF
 # vendor/lib/libats.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libauto_framing_arcsoft.uniplugin@1.0.so
@@ -2238,15 +2211,23 @@ vendor/lib64/lib_SoundBooster_ver1050.so
 vendor/lib64/libadm.so
 vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadreno_utils.so
-# vendor/lib64/libagm.so
-# vendor/lib64/libagmmixer.so
+vendor/bin/agmcap;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/bin/agmcompressplay;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/bin/agmplay;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/lib64/libagm.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/lib64/libagmmixer.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/lib64/libagmclient.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+#vendor/lib64/libagm_mixer_plugin.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+#vendor/lib64/libagm_compress_plugin.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+#vendor/lib64/libagm_pcm_plugin.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+#vendor/lib64/libsndcardparser.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
 vendor/lib64/libai_denoiser_interface.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaivideocentral.arcsoft.so
-# vendor/lib64/libar-acdb.so
-# vendor/lib64/libar-gpr.so
-# vendor/lib64/libar-gsl.so;DISABLE_CHECKELF
-# vendor/lib64/libats.so
+vendor/lib64/libar-acdb.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/lib64/libar-gpr.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/lib64/libar-gsl.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/lib64/libats.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libauto_framing_arcsoft.uniplugin@1.0.so
 vendor/lib64/libautotracking_interface.so
@@ -2396,8 +2377,8 @@ vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblocdiagiface.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_wifihal.so
-# vendor/lib64/liblx-ar_util.so
-# vendor/lib64/liblx-osal.so
+vendor/lib64/liblx-ar_util.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/lib64/liblx-osal.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
 vendor/lib64/libmaskdetection.uniplugin@1.0.so
 vendor/lib64/libmctfengine_stub.so
 vendor/lib64/libmdmdetect.so
@@ -2438,7 +2419,7 @@ vendor/lib64/libops.so
 vendor/lib64/libos.so
 vendor/lib64/libpadm.so
 vendor/lib64/libpal_net_if.so
-# vendor/lib64/libpalclient.so
+vendor/lib64/libpalclient.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
 vendor/lib64/libpantilt_detector.uniplugin@1.0.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
