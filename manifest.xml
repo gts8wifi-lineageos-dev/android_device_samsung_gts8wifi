@@ -616,5 +616,25 @@
         </interface>
         <fqname>@3.1::ISehSupplicant/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.camera.aon</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAONService</name>
+            <instance>aoncameraservice</instance>
+        </interface>
+        <fqname>@1.0::IAONService/aoncameraservice</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.camera.postproc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IPostProcService</name>
+            <instance>camerapostprocservice</instance>
+        </interface>
+        <fqname>@1.0::IPostProcService/camerapostprocservice</fqname>
+    </hal>
     <kernel target-level="6"/>
 </manifest>
