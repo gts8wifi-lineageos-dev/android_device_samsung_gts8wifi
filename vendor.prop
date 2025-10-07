@@ -272,13 +272,11 @@ vendor.wv.oemcrypto.debug.enable_external_display_check=1
 wifi.aware.interface=wifi-aware0
 
 # Display
-debug.sf.ignore_hwc_physical_display_orientation=true
-ro.bootanim.set_orientation_4630946941668558211=ORIENTATION_90
-ro.surface_flinger.primary_display_orientation=ORIENTATION_270
+ro.bootanim.set_orientation_4630947232161729154=ORIENTATION_90
 
 # Fingerprint
 ro.vendor.fingerprint.type=side
-ro.vendor.fingerprint.sensor_location=1636|295|130|local:4630947232161729153
+ro.vendor.fingerprint.sensor_location=1636|295|130|local:4630947232161729154
 
 ## Vibrator HAL
 ro.vendor.vibrator_hal.click_duration=60
