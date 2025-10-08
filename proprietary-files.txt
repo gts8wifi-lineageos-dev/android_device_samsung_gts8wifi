@@ -1007,7 +1007,6 @@ vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
 vendor/etc/perf/targetsysnodesconfigs.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.perf.xml
-vendor/etc/powerhint.xml
 vendor/lib/libqti-perfd-client.so
 vendor/lib64/libqti-perfd-client.so
 
@@ -1022,11 +1021,6 @@ vendor/lib64/libqti-iopd-client.so
 vendor/lib64/libqti-util.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
-
-# Power
-vendor/bin/hw/android.hardware.power.samsung-service
-vendor/lib/hw/power.default.so
-vendor/lib64/hw/power.default.so
 
 # Power configs
 vendor/etc/pwr/PSMPowerOptFeature.xml
@@ -1439,7 +1433,6 @@ vendor/etc/init/mppserver.rc
 vendor/etc/init/mstatdaemon.rc
 vendor/etc/init/mutualex.rc
 vendor/etc/init/pa_daemon_qsee.rc
-vendor/etc/init/power-default-sec.rc
 vendor/etc/init/poweropt-service.rc
 vendor/etc/init/qapeservice.rc
 vendor/etc/init/qguard.rc
@@ -1587,7 +1580,6 @@ vendor/etc/vintf/manifest/lights-default-sec.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa.xml
 vendor/etc/vintf/manifest/memtrack_qti.xml
 vendor/etc/vintf/manifest/mppserver.xml
-vendor/etc/vintf/manifest/power-samsung.xml
 vendor/etc/vintf/manifest/radio_manifest_wifionly.xml
 vendor/etc/vintf/manifest/sec_c2_manifest_default0_1_0.xml
 vendor/etc/vintf/manifest/secaudiohalaidl_manifest.xml
