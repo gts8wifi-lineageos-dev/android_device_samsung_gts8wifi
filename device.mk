@@ -239,7 +239,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
     vendor_dsp_mountpoint \
-    vendor_firmware_mnt_mountpoint
+    vendor_firmware_mnt_mountpoint \
+    vendor_firmware-modem_mountpoint
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
