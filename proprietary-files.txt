@@ -1323,7 +1323,6 @@ vendor/bin/hw/vendor.qti.hardware.memtrack-service
 vendor/bin/hw/vendor.samsung.hardware.authfw@1.0-service
 vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
-vendor/bin/hw/vendor.samsung.hardware.hyper-service
 vendor/bin/hw/vendor.samsung.hardware.light-service
 vendor/bin/hw/vendor.samsung.hardware.media.converter@1.0-service
 vendor/bin/hw/vendor.samsung.hardware.miscpower@2.0-service
@@ -1416,7 +1415,6 @@ vendor/etc/init/camera.unihal.rc
 vendor/etc/init/emservice.rc
 vendor/etc/init/fingerprint_common.rc
 vendor/etc/init/hermesd.rc
-vendor/etc/init/hyper-default-sec.rc
 vendor/etc/init/imsdaemon.rc
 vendor/etc/init/init.audio.samsung.rc
 vendor/etc/init/init.avb.rc
@@ -1584,7 +1582,6 @@ vendor/etc/ssg/tz_whitelist.json
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/etc/vintf/manifest/deviceManifest.xml
 vendor/etc/vintf/manifest/engmode_manifest.xml
-vendor/etc/vintf/manifest/hyper-default-sec.xml
 vendor/etc/vintf/manifest/iweaver_v1_manifest.xml
 vendor/etc/vintf/manifest/lights-default-sec.xml
 vendor/etc/vintf/manifest/manifest_non_qmaa.xml
@@ -1866,7 +1863,6 @@ vendor/lib/libhdradaptivecustom.so
 vendor/lib/libhermes.so
 vendor/lib/libhypermotion_core.so
 vendor/lib/libhypermotion_interface.so
-vendor/lib/libhypervintf.so
 vendor/lib/libidl.so
 vendor/lib/libimage_enhancement.arcsoft.so
 vendor/lib/libimagecodec_native.quram.so
@@ -2333,7 +2329,6 @@ vendor/lib64/libhermes.so
 vendor/lib64/libhermes_bdbridge.so
 vendor/lib64/libhermes_cred.so
 vendor/lib64/libhwvault.so
-vendor/lib64/libhyper.so:vendor/lib64/libhyper_vendor.so;FIX_SONAME
 vendor/lib64/libhypermotion_core.so
 vendor/lib64/libhypermotion_interface.so
 vendor/lib64/libhypervintf.so
