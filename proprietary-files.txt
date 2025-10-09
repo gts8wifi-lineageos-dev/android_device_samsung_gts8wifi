@@ -1296,9 +1296,6 @@ vendor/lib64/hw/vibrator.default.so
 
 # Wi-Fi
 vendor/bin/cnss-daemon
-vendor/bin/hostapd_cli
-vendor/bin/wpa_cli
-vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 
 # Wi-Fi configs
 vendor/etc/wifi/icm.conf
