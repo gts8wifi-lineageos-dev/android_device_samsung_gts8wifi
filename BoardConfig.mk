@@ -140,8 +140,6 @@ TARGET_KERNEL_EXT_MODULES := \
  	qcom/opensource/video-driver \
  	qcom/opensource/wlan/qcacld-3.0/.qca6490
 
-TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
