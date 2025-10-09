@@ -2016,7 +2016,6 @@ vendor/lib/libsn220u_fw.so
 vendor/lib/libsnaace.so
 vendor/lib/libsnamrnb.so
 vendor/lib/libsnamrwb.so
-# vendor/lib/libsndcardparser.so
 vendor/lib/libsns_direct_channel_stub.so
 vendor/lib/libsns_registry_skel.so
 vendor/lib/libsoc_helper.so
@@ -2202,10 +2201,10 @@ vendor/bin/agmplay;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
 vendor/lib64/libagm.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
 vendor/lib64/libagmmixer.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
 vendor/lib64/libagmclient.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
-#vendor/lib64/libagm_mixer_plugin.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
-#vendor/lib64/libagm_compress_plugin.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
-#vendor/lib64/libagm_pcm_plugin.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
-#vendor/lib64/libsndcardparser.so;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/lib64/libagm_mixer_plugin.so;DISABLE_DEPS;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/lib64/libagm_compress_plugin.so;DISABLE_DEPS;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+vendor/lib64/libagm_pcm_plugin.so;DISABLE_DEPS;MODULE_SUFFIX=_vendor;MAKE_COPY_RULE
+# vendor/lib64/libsndcardparser.so
 vendor/lib64/libai_denoiser_interface.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaivideocentral.arcsoft.so

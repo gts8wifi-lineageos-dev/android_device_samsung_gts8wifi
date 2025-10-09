@@ -33,14 +33,8 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usbv2.default \
-    libagm_compress_plugin \
-    libagm_mixer_plugin \
-    libagm_pcm_plugin \
     libaudiochargerlistener \
     libbatterylistener \
-    lib_bt_aptx \
-    lib_bt_ble \
-    lib_bt_bundle \
     libfmpal \
     libqcompostprocbundle \
     libqcomvisualizer \
@@ -52,9 +46,6 @@ AUDIO_HAL_DIR := hardware/qcom-caf/sm8450/audio/primary-hal
 AUDIO_PAL_DIR := hardware/qcom-caf/sm8450/audio/pal
 
 PRODUCT_COPY_FILES += \
-    $(AUDIO_HAL_DIR)/configs/common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(AUDIO_HAL_DIR)/configs/taro/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_taro/audio_effects.conf \
-    $(AUDIO_HAL_DIR)/configs/taro/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_taro/audio_effects.xml \
     $(AUDIO_HAL_DIR)/configs/taro/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml
 
 PRODUCT_COPY_FILES += \
