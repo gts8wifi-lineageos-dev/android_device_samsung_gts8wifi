@@ -123,10 +123,6 @@ vendor/etc/a2dpsink_audio_policy_configuration.xml
 vendor/etc/audio_effects.xml
 vendor/etc/audio_effects_sec.xml
 vendor/etc/audio_effects_spatializer.xml
-vendor/etc/audio_policy_configuration_base.xml
-vendor/etc/audio_policy_configuration_sec.xml
-vendor/etc/bluetooth_qti_audio_policy_configuration.xml
-vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml
 vendor/etc/hearing_aid_audio_policy_configuration.xml
 vendor/etc/situation_audio_policy_volumes_sec.xml
 
@@ -1236,11 +1232,9 @@ vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so
 vendor/lib/hw/android.hardware.soundtrigger@2.1-impl.so
 vendor/lib/hw/android.hardware.soundtrigger@2.2-impl.so
 vendor/lib/hw/android.hardware.soundtrigger@2.3-impl.so
-# vendor/lib/hw/sound_trigger.primary.taro.so
 vendor/lib/vendor.qti.voiceprint@1.0.so
 vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so
 vendor/lib64/hw/android.hardware.soundtrigger@2.3-impl.so
-# vendor/lib64/hw/sound_trigger.primary.taro.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Thermal (Qualcomm)
@@ -1789,7 +1783,6 @@ vendor/lib/libbauthtzcommon.so
 vendor/lib/libbitmlengine.so
 vendor/lib/libbitmlenginev2.so
 vendor/lib/libbluetooth_a2dpsink_session.so
-vendor/lib/libbluetooth_audio_session.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 vendor/lib/libbodyid.arcsoft.so
@@ -2219,7 +2212,6 @@ vendor/lib64/libbauthtzcommon.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libbluetooth_a2dpsink_session.so
-vendor/lib64/libbluetooth_audio_session.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libbodyid.arcsoft.so

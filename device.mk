@@ -29,12 +29,16 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usbv2.default \
+    sound_trigger.primary.taro:64 \
     libaudiochargerlistener \
     libbatterylistener \
+    libbluetooth_audio_session \
     libfmpal \
     libqcompostprocbundle \
     libqcomvisualizer \
