@@ -718,7 +718,6 @@ vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/hw/gralloc.default.so
-vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib64/vendor.qti.hardware.display.config-V1-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.display.config-V2-ndk_platform.so
@@ -727,6 +726,9 @@ vendor/lib64/vendor.qti.hardware.display.config-V4-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.display.config-V5-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.display.config-V6-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+
+# Display Vulkan - from diting OS2.0.203.0.VLFMIXM
+vendor/lib64/hw/vulkan.adreno.so|7e26010c298aeff46a428383783ea2e910aa7851
 
 # Display HDR - from ingot-user 14 UKQ1.240227.165 release-keys
 vendor/lib64/libgame_enhance.so|4432e47d990e98edb141becc345a92d03df26bf4
@@ -775,8 +777,10 @@ vendor/etc/display/qdcm_calib_data_ss_dsi_panel_NT36523_PPA957DB1_WQXGA.json
 vendor/etc/display/qdcm_calib_data_ss_dsi_panel_S6TUUM1_AMSA24VU01_WQXGA.json
 vendor/etc/display/qdcm_calib_data_ss_dsi_panel_S6TUUM1_AMSA46AS01_WQXGA.json
 
+# Display firmware - from diting OS2.0.203.0.VLFMIXM
+vendor/firmware/a730_sqe.fw|8302565a0e61eec583ef25dfc5f42aff11b6be21
+
 # Display firmware
-vendor/firmware/a730_sqe.fw
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_32.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
