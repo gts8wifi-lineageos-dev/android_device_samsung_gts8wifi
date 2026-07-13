@@ -533,10 +533,7 @@
         <item>134</item>
         <item>152</item>
         <item>162</item>
-        <item>249</item>
         <item>500</item>
-        <item>500</item>
-        <item>600</item>
         <item>600</item>
     </array>
 
@@ -807,19 +804,6 @@
         <item>600</item>
     </array>
 
-    <!-- Array of output values for LCD backlight corresponding to the lux values
-         in the config_autoBrightnessLevels array.  This array should have size one greater
-         than the size of the config_autoBrightnessLevels array.
-         The brightness values must be between 0 and 255 and be non-decreasing.
-         This must be overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>10</item>
-        <item>80</item>
-        <item>162</item>
-        <item>190</item>
-        <item>255</item>
-    </integer-array>
-
     <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.023529412</item>
 
     <!-- Default screen brightness setting set.
@@ -855,6 +839,10 @@
          The duplication is necessary, because this information is used before the features are
          available to the system.-->
     <bool name="config_freeformWindowManagement">true</bool>
+
+    <!-- Enable the Android desktop experience on the tablet's built-in display. -->
+    <bool name="config_isDesktopModeSupported">true</bool>
+    <bool name="config_canInternalDisplayHostDesktops">true</bool>
 
     <!-- Enable lockscreen rotation by default -->
     <bool name="config_enableLockScreenRotation">true</bool>

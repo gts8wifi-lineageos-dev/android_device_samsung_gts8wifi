@@ -98,15 +98,9 @@ vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
-# Bluetooth (A2DP)
+# Bluetooth (Samsung HIDL extension)
 vendor/lib/vendor.samsung.hardware.bluetooth@2.0.so
 vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
-vendor/lib/libsehbluetooth_audio_session.so
-vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.0.so
-vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.1.so
-vendor/lib64/libsehbluetooth_audio_session.so
-vendor/lib64/vendor.samsung.hardware.bluetooth.audio@2.0.so
-vendor/lib64/vendor.samsung.hardware.bluetooth.audio@2.1.so
 
 # Camera
 vendor/lib/camera/com.qti.eeprom.gt24p128c2csli_imx766.so
@@ -1285,7 +1279,6 @@ vendor/firmware/vpu20_4v_unsigned.mbn
 vendor/firmware/wez01_gts8.bin
 vendor/firmware/wlan-connection-roaming-backup.ini
 vendor/firmware/wlan-connection-roaming.ini
-vendor/lib/btaudio_offload_if.so
 vendor/lib/camx.device@3.2-impl.so
 vendor/lib/camx.device@3.3-impl.so
 vendor/lib/camx.device@3.4-ext-impl.so
@@ -1371,8 +1364,6 @@ vendor/lib/libbatching.so
 vendor/lib/libbauthtzcommon.so
 vendor/lib/libbitmlengine.so
 vendor/lib/libbitmlenginev2.so
-vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib/libbluetooth_audio_session_qti_2_1.so
 vendor/lib/libbodyid.arcsoft.so
 vendor/lib/libc2filterplugin.so
 vendor/lib/libcdfw.so
@@ -1643,7 +1634,6 @@ vendor/lib/vintf-codecsolution-V2-ndk_platform.so
 vendor/lib64/AIAwbModel_v1.2.dlc
 vendor/lib64/AIAwbModel_v1.2.tflite
 vendor/lib64/SWPD_libTsAf_Hi1337_WIDE.so
-vendor/lib64/btaudio_offload_if.so
 vendor/lib64/camx.device@3.2-impl.so
 vendor/lib64/camx.device@3.3-impl.so
 vendor/lib64/camx.device@3.4-ext-impl.so
@@ -1742,8 +1732,6 @@ vendor/lib64/libbatching.so
 vendor/lib64/libbauthtzcommon.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
-vendor/lib64/libbluetooth_audio_session_qti.so
-vendor/lib64/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/libbodyid.arcsoft.so
 vendor/lib64/libc2filterplugin.so
 vendor/lib64/libcamera2ndk_vendor.so
