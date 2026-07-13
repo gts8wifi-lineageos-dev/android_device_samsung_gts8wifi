@@ -403,6 +403,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/wlan \
+    hardware/qcom-caf/wlan/qcwcn \
     hardware/samsung \
     kernel/samsung/sm8450 \
     kernel/samsung/sm8450-modules
@@ -476,3 +477,24 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/samsung/gts8wifi/gts8wifi-vendor.mk)
+
+# Avoid loading legacy Samsung display blobs into the Android 16 source-built display stack
+PRODUCT_PACKAGES -= \
+    libsdm-disp-vndapis \
+    libsdmextension \
+    libsnapdragoncolor-manager \
+    libsnapdragoncolor-qdcm
+
+# Keep known-crashing HALs out of the initial boot path
+PRODUCT_PACKAGES -= \
+    vendor.qti.hardware.AGMIPC@1.0-service \
+    vendor.samsung.hardware.camera.provider@4.0-service_64
+
+# GNSS vendor blobs still depend on the legacy platform AIDL shim from the Android 12 VNDK
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v31/arm64/arch-arm-armv8-a/shared/vndk-core/android.hardware.gnss-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss-V1-ndk_platform.so \
+    prebuilts/vndk/v31/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss-V1-ndk_platform.so
+
+PRODUCT_COPY_FILES := $(filter-out \
+    vendor/samsung/gts8wifi/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc, \
+    $(PRODUCT_COPY_FILES))

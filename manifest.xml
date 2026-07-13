@@ -61,16 +61,6 @@
         </interface>
         <fqname>@2.0::ISehBluetooth/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>android.hardware.camera.provider</name>
-        <transport>hwbinder</transport>
-        <version>2.6</version>
-        <interface>
-            <name>ICameraProvider</name>
-            <instance>legacy/0</instance>
-        </interface>
-        <fqname>@2.6::ICameraProvider/legacy/0</fqname>
-    </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
@@ -90,16 +80,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IComponentStore/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.AGMIPC</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAGM</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IAGM/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.dsp</name>
@@ -212,6 +192,27 @@
             <name>IBluetoothAudioProvidersFactory</name>
             <instance>default</instance>
         </interface>
+    </hal>
+    <hal format="hidl" override="true">
+        <name>vendor.display.color</name>
+        <transport>hwbinder</transport>
+        <version>1.7</version>
+    </hal>
+    <hal format="hidl" override="true">
+        <name>vendor.display.postproc</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.lineage.livedisplay</name>
+        <version>1</version>
+        <fqname>IAdaptiveBacklight/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>vendor.lineage.touch</name>
+        <version>1</version>
+        <fqname>IGloveMode/default</fqname>
+        <fqname>IHighTouchPollingRate/default</fqname>
     </hal>
     <kernel target-level="6"/>
 </manifest>

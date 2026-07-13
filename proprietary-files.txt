@@ -549,8 +549,6 @@ vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
 
 # Display
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -619,8 +617,6 @@ vendor/lib64/libmemutils.so|e122c3ff95b10a6263e698261abafe62cee98010
 vendor/lib64/libqdcm-algo.so|e873dc21878d92d20f6937453c9d3265a0d3a93d
 vendor/lib64/libqdcm-json-mode-parser.so|1c8f1a841a877efbed0a0b3db3d551ff1283f14f
 vendor/lib64/libqdcm-mode-parser.so|341178dfb18e03b6fabff27a080fb96f15188942
-vendor/lib64/libsnapdragoncolor-manager.so|72291478bd56bada0fc3df3617e765b28ef54f66
-vendor/lib64/libsnapdragoncolor-qdcm.so|9f0bc72290618324e95cd9f4eca6987a6733bd06
 
 # Display SDM - from ingot-user 14 UKQ1.240227.165 release-keys
 vendor/etc/display/DPU660.xml|b26dd73e361546d89bf3d7082a471703dc6ac2cb
@@ -640,8 +636,6 @@ vendor/lib64/libqseed3.so|6fcc4cb419053b57fc14d7cb2e3fdb18901cc87e
 vendor/lib64/librcmask.so|36919cfe71e1e6ab4e507f98dab320b7046d24c4
 vendor/lib64/libsdm-color.so|3ffdac82ec83cfcf0cfab32718a08500ec73e36d
 vendor/lib64/libsdm-colormgr-algo.so|0c922b88dc8f11a9c8dbe78daec337d4d5333087
-vendor/lib64/libsdm-disp-vndapis.so|169adaa522f75d622e76a1597c486eff4551c5a3
-vendor/lib64/libsdmextension.so|08d321d3e0da2231a29e3ec92604dca48c8895e3
 vendor/lib64/libtestutils.so|61b98f252afde4eb7c674de870e7afb590c9bb2a
 vendor/lib64/libtinyxml2_1.so|ae0c9190fd54c18a6c28dfccdfd29655abcb08de
 
@@ -1092,7 +1086,6 @@ vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/init/pa_daemon_qsee.rc
 vendor/etc/init/vendor.qti.diag.rc
-vendor/etc/init/vendor.ril.wifionly.qcom.rc
 vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc
@@ -1843,8 +1836,6 @@ vendor/lib64/libkcl.so
 vendor/lib64/libkernelmanager.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterutils.so
-vendor/lib64/libkeystore-engine-wifi-hidl.so
-vendor/lib64/libkeystore-wifi-hidl.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/liblistensoundmodel2vendor.so

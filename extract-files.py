@@ -90,6 +90,10 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/init/pa_daemon_qsee.rc': blob_fixup()
         .regex_replace('\n    start proca', ''),
 
+    'vendor/etc/init/wifi_qcom.rc': blob_fixup()
+        .regex_replace(r'service vendor\.cnss_dumpcollector .*\n(?:[ \t]+.*\n)*', '')
+        .regex_replace(r'(?:stop|start) vendor\.cnss_dumpcollector\n', ''),
+
     'vendor/bin/hw/macloader': blob_fixup()
         .binary_regex_replace(b'vendor.wifi.dualconcurrent.interface', b'vendor.wiff.dualconcurrent.interface')
         .binary_regex_replace(b'ro.vendor.wifi.sap.interface', b'ru.vendor.wifi.sap.interface'),
