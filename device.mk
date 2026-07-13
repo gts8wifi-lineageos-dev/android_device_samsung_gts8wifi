@@ -88,13 +88,19 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 2560
 
-# Cameara
+# Camera
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
+
+PRODUCT_PACKAGES += \
+    camera.device@3.2-impl.samsung \
+    camera.device@3.3-impl.samsung \
+    camera.device@3.4-impl.samsung \
+    camera.device@3.5-impl.samsung
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -261,6 +267,10 @@ PRODUCT_PACKAGES += \
 
 # Samsung HALs board-specific headers
 $(call soong_config_set,samsungVars,target_specific_header_path,device/samsung/gts8wifi/include)
+
+# Samsung camera device HAL
+$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
+$(call soong_config_set,samsungCameraVars,needs_sec_unihal_fields,true)
 
 # Memtrack
 PRODUCT_PACKAGES += \
@@ -487,14 +497,11 @@ PRODUCT_PACKAGES -= \
 
 # Keep known-crashing HALs out of the initial boot path
 PRODUCT_PACKAGES -= \
-    vendor.qti.hardware.AGMIPC@1.0-service \
-    vendor.samsung.hardware.camera.provider@4.0-service_64
+    vendor.qti.hardware.AGMIPC@1.0-service
 
 # GNSS vendor blobs still depend on the legacy platform AIDL shim from the Android 12 VNDK
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v31/arm64/arch-arm-armv8-a/shared/vndk-core/android.hardware.gnss-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss-V1-ndk_platform.so \
-    prebuilts/vndk/v31/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss-V1-ndk_platform.so
-
-PRODUCT_COPY_FILES := $(filter-out \
-    vendor/samsung/gts8wifi/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc, \
-    $(PRODUCT_COPY_FILES))
+    prebuilts/vndk/v31/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss-V1-ndk_platform.so \
+    prebuilts/vndk/v31/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.common-V2-ndk_platform.so \
+    prebuilts/vndk/v31/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.common-V2-ndk_platform.so
