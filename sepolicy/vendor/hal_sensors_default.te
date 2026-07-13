@@ -5,4 +5,4 @@ allow hal_sensors_default { vendor_sysfs_touchscreen vendor_sysfs_touchscreen_wr
 
 allow hal_sensors_default vendor_sysfs_input:dir { open read search };
 
-set_prop(hal_sensors_default, sns_camera_light_prop)
+set_prop(hal_sensors_default, vendor_sns_camera_light_prop)

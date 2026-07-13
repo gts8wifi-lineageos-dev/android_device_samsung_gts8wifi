@@ -244,22 +244,9 @@ on boot
     mkdir /efs/biometrics 0770 system system
     mkdir /efs/biometrics/meta 0770 system system
 
-#goodix fingerprint daemon
-service goodixd /vendor/bin/goodixfingerprintd
-    class late_start
-    user system
-    group media_rw system
-
 # Pageboostd
 on property:sys.boot_completed=1
     start pageboostd
-
-service pageboostd /system/bin/pageboostd
-    class main
-    user system
-    group system mount radio net_bt sdcard_rw shell media media_rw
-    socket pageboostd seqpacket 0660 system system
-    disabled
 
 on shutdown
 

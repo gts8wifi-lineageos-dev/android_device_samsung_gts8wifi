@@ -1,12 +1,17 @@
+# Camera
+type vendor_sec_camera_prop, vendor_property_type, property_type;
+
 # GNSS
 vendor_internal_prop(vendor_gnss_psds_prop)
 
 # NFC
 vendor_internal_prop(vendor_sec_nfc_prop)
-vendor_internal_prop(vendor_nfc_prop)
 
 # Secure Element
 vendor_internal_prop(vendor_sehal_prop)
+
+# Sensors
+type vendor_sns_camera_light_prop, vendor_property_type, property_type;
 
 # Tee
 vendor_internal_prop(vendor_qseecomd_prop)
