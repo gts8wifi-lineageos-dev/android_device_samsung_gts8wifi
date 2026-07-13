@@ -107,6 +107,16 @@
         <fqname>@2.0::IIop/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.AGMIPC</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAGM</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IAGM/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.pal</name>
         <transport>hwbinder</transport>
         <version>1.0</version>

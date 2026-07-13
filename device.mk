@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl \
     android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
+    audio.primary.taro:64 \
     audio.r_submix.default \
     audio.usbv2.default \
     sound_trigger.primary.taro:64 \
@@ -49,7 +50,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libagm \
     vendor.qti.hardware.AGMIPC@1.0-impl \
-    vendor.qti.hardware.AGMIPC@1.0-service \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
     libagm_compress_plugin \
