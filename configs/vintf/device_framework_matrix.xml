@@ -260,14 +260,6 @@
     </interface>
 </hal>
 <hal format="aidl" optional="true">
-    <name>vendor.samsung.hardware.security.hdcp.wifidisplay</name>
-    <version>2</version>
-    <interface>
-        <name>ISehHdcp</name>
-        <instance>default</instance>
-    </interface>
-</hal>
-<hal format="aidl" optional="true">
     <name>vendor.samsung.hardware.security.widevine.keyprov</name>
     <interface>
         <name>ISehWidevineKeyProv</name>
@@ -295,22 +287,6 @@
     <version>2</version>
     <interface>
         <name>ISehKg</name>
-        <instance>default</instance>
-    </interface>
-</hal>
-<hal format="hidl" optional="true">
-    <name>vendor.samsung.hardware.wifi.hostapd</name>
-    <version>4.0</version>
-    <interface>
-        <name>ISehHostapd</name>
-        <instance>default</instance>
-    </interface>
-</hal>
-<hal format="hidl" optional="true">
-    <name>vendor.samsung.hardware.wifi</name>
-    <version>2.0-3</version>
-    <interface>
-        <name>ISehWifi</name>
         <instance>default</instance>
     </interface>
 </hal>

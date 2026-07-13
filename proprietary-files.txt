@@ -891,7 +891,6 @@ vendor/lib/hw/local_time.default.so
 vendor/lib64/hw/local_time.default.so
 
 # Media
-vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
@@ -1008,11 +1007,8 @@ vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
 # Power configs
-vendor/etc/pwr/PSMPowerOptFeature.xml
 vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/StandbyFeature.xml
-vendor/etc/pwr/VendorScenarioPowerOptFeature.xml
-vendor/etc/pwr/VideoPowerOptFeature.xml
 
 # QCC
 vendor/bin/qcc-vendor
@@ -1306,7 +1302,6 @@ vendor/bin/hw/vendor.samsung.hardware.tlc.hdm@1.1-service
 vendor/bin/hw/vendor.samsung.hardware.tlc.iccc@1.0-service
 vendor/bin/hw/vendor.samsung.hardware.tlc.kg-service
 vendor/bin/hw/vendor.samsung.hardware.tlc.ucm@2.0-service
-vendor/bin/hw/vendor.samsung.hardware.wifi@2.0-service
 vendor/bin/StoreKeybox
 vendor/bin/add.pb
 vendor/bin/argosd
@@ -1358,7 +1353,6 @@ vendor/bin/ubwcconvert
 vendor/bin/utility_cache_test.tflite
 vendor/bin/vendor.samsung.hardware.security.engmode@1.0-service
 vendor/bin/vendor.samsung.hardware.security.fkeymaster-service
-vendor/bin/vendor.samsung.hardware.security.hdcp.wifidisplay-service
 vendor/bin/vendor.samsung.hardware.security.proca@2.0-service
 vendor/bin/vmmgr
 vendor/bin/wvkprov
@@ -1404,7 +1398,6 @@ vendor/etc/init/mppserver.rc
 vendor/etc/init/mstatdaemon.rc
 vendor/etc/init/mutualex.rc
 vendor/etc/init/pa_daemon_qsee.rc
-vendor/etc/init/poweropt-service.rc
 vendor/etc/init/qapeservice.rc
 vendor/etc/init/qguard.rc
 vendor/etc/init/qmipriod.debug.rc
@@ -1430,7 +1423,6 @@ vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.engmode@1.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.fkeymaster-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0-service.rc
-vendor/etc/init/vendor.samsung.hardware.security.hdcp.wifidisplay-default.rc
 vendor/etc/init/vendor.samsung.hardware.security.skpm@1.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov-service.rc
 vendor/etc/init/vendor.samsung.hardware.snap-lazy.rc
@@ -1441,7 +1433,6 @@ vendor/etc/init/vendor.samsung.hardware.tlc.hdm@1.1-service.rc
 vendor/etc/init/vendor.samsung.hardware.tlc.iccc@1.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.tlc.kg-service.rc
 vendor/etc/init/vendor.samsung.hardware.tlc.ucm@2.0-service.rc
-vendor/etc/init/vendor.samsung.hardware.wifi@2.0-service.rc
 vendor/etc/init/vendor.sensordebug.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
@@ -1557,15 +1548,12 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint@3.0-ser
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.qcom.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.securesnap-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.fkeymaster-service.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.security.hdcp.wifidisplay-default.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.widevine.keyprov-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.ddar@1.0-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.hdm@1.1-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.iccc@1.0-manifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.kg-manifest.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.wifi.hostapd.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.wifi@2.0-service.xml
 vendor/etc/DsgpPolicy.csv
 vendor/etc/SoundBoosterParam.txt
 vendor/etc/batching.conf
@@ -2028,8 +2016,6 @@ vendor/lib/libvndfwk_detect_jni.qti_vendor.so
 vendor/lib/libvpphcp.so
 vendor/lib/libvpphvx.so
 vendor/lib/libvppimmotion.so
-vendor/lib/libwpa_client.so
-vendor/lib/libwpa_drv_oem.so
 vendor/lib/libwqe.so
 vendor/lib/libxml.so
 vendor/lib/libxtadapter.so
@@ -2540,8 +2526,6 @@ vendor/lib64/libvpphcp.so
 vendor/lib64/libvpphvx.so
 vendor/lib64/libvppimmotion.so
 vendor/lib64/libwfdaac_vendor.so
-vendor/lib64/libwpa_client.so
-vendor/lib64/libwpa_drv_oem.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 vendor/lib64/libxtadapter.so
@@ -2587,7 +2571,6 @@ vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 vendor/lib64/vendor.samsung.hardware.security.engmode@1.0.so
 vendor/lib64/vendor.samsung.hardware.security.fkeymaster-V1-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0.so
-vendor/lib64/vendor.samsung.hardware.security.hdcp.wifidisplay-V2-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.security.skpm@1.0.so
 vendor/lib64/vendor.samsung.hardware.security.widevine.keyprov-V1-ndk_platform.so
@@ -2606,13 +2589,6 @@ vendor/lib64/vendor.samsung.hardware.tlc.iccc@1.0.so
 vendor/lib64/vendor.samsung.hardware.tlc.kg-V2-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.tlc.ucm@2.0-impl.so
 vendor/lib64/vendor.samsung.hardware.tlc.ucm@2.0.so
-vendor/lib64/vendor.samsung.hardware.wifi.hostapd@4.0.so
-vendor/lib64/vendor.samsung.hardware.wifi.supplicant@3.0.so
-vendor/lib64/vendor.samsung.hardware.wifi.supplicant@3.1.so
-vendor/lib64/vendor.samsung.hardware.wifi@2.0.so
-vendor/lib64/vendor.samsung.hardware.wifi@2.1.so
-vendor/lib64/vendor.samsung.hardware.wifi@2.2.so
-vendor/lib64/vendor.samsung.hardware.wifi@2.3.so
 vendor/lib64/vintf-codecsolution-V2-ndk_platform.so
 vendor/saiv/image_understanding/db/af_segmenter/af_segmenter_cnn.dlc
 vendor/saiv/image_understanding/db/af_segmenter/af_segmenter_cnn.info

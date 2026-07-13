@@ -378,6 +378,9 @@ PRODUCT_SOONG_NAMESPACES += \
     kernel/samsung/sm8450 \
     kernel/samsung/sm8450-modules
 
+# Remove broken dependency
+PRODUCT_SOURCE_ROOT_DIRS += -hardware/samsung/hidl/vibrator/haptic
+
 # Ueventd
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
@@ -402,13 +405,15 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
     hostapd \
     libwifi-hal-qcom \
     libwifi-hal-ctrl \
     WifiOverlay \
     wpa_cli \
     wpa_supplicant \
-    wpa_supplicant.conf
+    wpa_supplicant.conf \
+    libwpa_client
 
 PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \

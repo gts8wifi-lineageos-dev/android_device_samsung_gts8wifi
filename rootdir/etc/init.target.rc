@@ -126,6 +126,12 @@ on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
+    # Create symlinks for sensors HAL to fix /odm/etc/sensors/hals.conf path mismatch
+    mkdir /odm/etc 0755 system system
+    mkdir /odm/etc/sensors 0755 system system
+    symlink /vendor/etc/sensors/hals.conf /odm/etc/sensors/hals.conf
+    symlink /vendor/etc/sensors/sns_reg_config /odm/etc/sensors/sns_reg_config
+
 on late-fs
     wait_for_prop hwservicemanager.ready true
     #exec_start wait_for_keymaster
