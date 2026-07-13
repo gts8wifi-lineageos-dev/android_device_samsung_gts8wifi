@@ -72,8 +72,6 @@ persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 persist.vendor.qcomsysd.enabled=1
 persist.vendor.qfp=true
-persist.vendor.radio.atfwd.start=false
-persist.vendor.radio.enableadvancedscan=true
 persist.vendor.rcs.singlereg.feature=1
 ro.af.client_heap_size_kbyte=7168
 ro.apk_verity.mode=2
@@ -165,7 +163,6 @@ ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.hdm.supported.swblock=0x100
 ro.vendor.perf-hal.ver=2.3
 ro.vendor.perf.scroll_opt=1
-ro.vendor.qspm.enable=false
 ro.vendor.use_data_netmgrd=false
 security.ADP.policy_version=00000000
 security.ADP.version=0
@@ -183,8 +180,6 @@ sys.usb.mtp.batchcancel=1
 sys.vendor.shutdown.waittime=500
 vendor.audio.adm.buffering.ms=3
 vendor.audio.c2.preferred=true
-vendor.audio.dolby.ds2.enabled=false
-vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.enable.mirrorlink=false
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.audiozoom.enable=false
@@ -279,13 +274,10 @@ ro.bootanim.set_orientation_4630947232161729154=ORIENTATION_90
 ro.vendor.fingerprint.type=side
 ro.vendor.fingerprint.sensor_location=1636|295|130|local:4630947232161729154
 
-# Perf
-ro.vendor.extension_library=libqti-perfd-client.so
-
-## Power HAL
+# Power HAL
 vendor.powerhal.disp.idle_support=false
 
-## Vibrator HAL
+# Vibrator HAL
 ro.vendor.vibrator_hal.click_duration=60
 ro.vendor.vibrator_hal.texture_tick_duration=40
 ro.vendor.vibrator_hal.tick_duration=40

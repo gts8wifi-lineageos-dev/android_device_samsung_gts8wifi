@@ -71,22 +71,6 @@ case "$baseband" in
         start vendor.qcrild3
     fi
 
-    case "$datamode" in
-        "tethered")
-            start vendor.dataqti
-            if [ "$low_ram" != "true" ]; then
-              start vendor.dataadpl
-            fi
-            ;;
-        "concurrent")
-            start vendor.dataqti
-            if [ "$low_ram" != "true" ]; then
-              start vendor.dataadpl
-            fi
-            ;;
-        *)
-            ;;
-    esac
 esac
 
 #

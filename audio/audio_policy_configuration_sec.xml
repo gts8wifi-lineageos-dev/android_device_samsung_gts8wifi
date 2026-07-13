@@ -299,9 +299,6 @@
 
         </module>
 
-        <!-- A2dp Sink Audio HAL -->
-        <xi:include href="a2dpsink_audio_policy_configuration.xml"/>
-
         <!-- Usb Audio HAL -->
         <xi:include href="usb_audio_policy_configuration.xml"/>
 

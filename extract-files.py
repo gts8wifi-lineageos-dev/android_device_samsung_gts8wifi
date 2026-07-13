@@ -37,6 +37,9 @@ lib_fixups: lib_fixups_user_type = {
     (
     ): lib_fixup_vendor_suffix,
     (
+        'android.hardware.common-V2-ndk_platform',
+        'android.hardware.gnss-V1-ndk_platform',
+        'android.system.keystore2-V1-ndk_platform',
         'libagm',
         'libagmclient',
         'libagmmixer',
@@ -45,7 +48,6 @@ lib_fixups: lib_fixups_user_type = {
         'libar-acdb',
         'libar-gsl',
         'libar-gpr',
-        'libar-pal',
         'libbatterylistener',
         'liblx-osal',
         'liblx-ar_util',
@@ -64,30 +66,12 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    ('vendor/bin/hw/android.hardware.security.keymint-service',
-     'vendor/lib64/libskeymint_cli.so',
-     'vendor/lib64/libskeymint10device.so',
-     'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so'): blob_fixup()
-        .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so', 'android.hardware.security.keymint-V4-ndk.so')
-        .replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so', 'android.hardware.security.secureclock-V1-ndk.so')
-        .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so', 'android.hardware.security.sharedsecret-V1-ndk.so')
-        .add_needed('android.hardware.security.rkp-V3-ndk.so')
-        .replace_needed('libcrypto.so', 'libcrypto-v33.so')
-        .replace_needed('libcppbor_external.so', 'libcppbor.so'),
-
-    ('vendor/lib64/hw/gatekeeper.mdfpp.so',
-     'vendor/lib64/libqtikeymaster4.so',
+    ('vendor/lib64/libqtikeymaster4.so',
      'vendor/lib64/libkeymasterutils.so',
-     'vendor/lib64/libengmode15.so',
-     'vendor/lib64/hw/vendor.qti.hardware.eid@1.0-impl.so',
      'vendor/lib64/libkeymasterdeviceutils.so',
      'vendor/lib64/libspcom.so',
-     'vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti',
-     'vendor/bin/vendor.samsung.hardware.security.fkeymaster-service'): blob_fixup()
+     'vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti'): blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
-
-     'vendor/lib64/libSecC2ComponentStore.so': blob_fixup()
-        .add_needed('libshim_c2.so'),
 
      ('vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so',
       'vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so',
@@ -98,11 +82,13 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so': blob_fixup()
         .add_needed('libshim_camera.so'),
 
-    ('vendor/lib64/libmpp_common_vendor.so',
-     'vendor/lib64/libc2filterplugin.so',
+    ('vendor/lib64/libc2filterplugin.so',
      'vendor/lib64/unihal_android.so',
      'vendor/lib/libapex_cmn.so'): blob_fixup()
         .add_needed('libui_shim.so'),
+
+    'vendor/etc/init/pa_daemon_qsee.rc': blob_fixup()
+        .regex_replace('\n    start proca', ''),
 
     'vendor/bin/hw/macloader': blob_fixup()
         .binary_regex_replace(b'vendor.wifi.dualconcurrent.interface', b'vendor.wiff.dualconcurrent.interface')

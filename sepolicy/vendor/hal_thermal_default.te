@@ -12,4 +12,3 @@ binder_call(hal_thermal_default, cameraserver)
 
 hal_client_domain(hal_thermal_default, hal_audio)
 
-add_hwservice(hal_thermal_server, hal_thermal_samsung_hwservice)

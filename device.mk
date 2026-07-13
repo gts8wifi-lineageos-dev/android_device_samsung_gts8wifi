@@ -46,6 +46,17 @@ PRODUCT_PACKAGES += \
     libsndcardparser \
     libvolumelistener
 
+PRODUCT_PACKAGES += \
+    libagm \
+    vendor.qti.hardware.AGMIPC@1.0-impl \
+    vendor.qti.hardware.AGMIPC@1.0-service \
+    libagm_mixer_plugin \
+    libagm_pcm_plugin \
+    libagm_compress_plugin \
+    libats \
+    libpalclient \
+    vendor.qti.hardware.pal@1.0-impl
+
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8450/audio/primary-hal
 AUDIO_PAL_DIR := hardware/qcom-caf/sm8450/audio/pal
 
@@ -232,6 +243,25 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/batt_slate_mode)
 
+# Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
+# IRQ balancing
+PRODUCT_PACKAGES += \
+    rebalance_interrupts-samsung
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.samsung
+
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay-service.samsung-qcom
+
+# Samsung HALs board-specific headers
+$(call soong_config_set,samsungVars,target_specific_header_path,device/samsung/gts8wifi/include)
+
 # Memtrack
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
@@ -288,7 +318,6 @@ PRODUCT_PACKAGES += \
     init.kernel.post_boot-diwali.sh \
     init.kernel.post_boot-taro.sh \
     init.kernel.post_boot.sh \
-    init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
     init.qcom.early_boot.sh \
@@ -385,7 +414,18 @@ PRODUCT_SOURCE_ROOT_DIRS += -hardware/samsung/hidl/vibrator/haptic
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.qti
+
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch-service.samsung
+
 # USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.samsung
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml

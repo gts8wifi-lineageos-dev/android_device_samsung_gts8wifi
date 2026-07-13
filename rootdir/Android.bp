@@ -48,12 +48,6 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.mdm.sh",
-    src: "bin/init.mdm.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qcom.class_core.sh",
     src: "bin/init.qcom.class_core.sh",
     vendor: true,
