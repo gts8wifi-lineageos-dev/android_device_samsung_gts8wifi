@@ -701,22 +701,48 @@ vendor/etc/init/android.hardware.dumpstate@1.1-service-lazy.rc
 vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service-lazy.xml
 
 # Fingerprint
+vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service
+vendor/etc/init/fingerprint_common.rc
+vendor/etc/init/init.fingerprint.rc
+vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.xml
 vendor/lib/hw/fingerprint.default.so
 vendor/lib/libbauthserver.so
+vendor/lib/libbauthtzcommon.so
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/libbauthserver.so
+vendor/lib64/libbauthtzcommon.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint@3.0.so
 
 # Gatekeeper
-vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
-vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
-vendor/lib/vendor.qti.spu@1.0.so
-vendor/lib/vendor.qti.spu@1.1.so
-vendor/lib/vendor.qti.spu@2.0.so
-vendor/lib64/vendor.qti.spu@1.0.so
-vendor/lib64/vendor.qti.spu@1.1.so
-vendor/lib64/vendor.qti.spu@2.0.so
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service|96e226f05fe54542458c0f0d9faf390921207269
+vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0|76998698e87a3932280577d25ec0769ce4a05281
+vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc|2c8d0c86f43b543e0d07cb34aa31b3b307240c8a
+vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc|7b100dbeffe9e6b9fe682543eede01d55b0f4e23
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so|54d8a8359e03ef8d6af29ddda8fb1e3a7819c1ec
+vendor/lib/vendor.qti.spu@1.0.so|35ee927eb98ea2ae78209658a2c1d673a4e02152
+vendor/lib/vendor.qti.spu@1.1.so|fba67f51836d526069236f83e4ba31293593c823
+vendor/lib/vendor.qti.spu@2.0.so|b512890d74b1dde76cca9c5fb3e4edeba30e8c3f
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl.so|e6f48dc756be36a69a3aac63ad8cdb76e98ba861
+vendor/lib64/hw/gatekeeper.mdfpp.so|f9b96cc01faa617ff80e2c6f7c6cce54d9b67bb8|02debf077e7583584a990cdaa84bfc3091ae37b2
+vendor/lib64/vendor.qti.spu@1.0.so|cb545d956337f517d71bd5707e2c70afae45ea2c
+vendor/lib64/vendor.qti.spu@1.1.so|9bf780fef9b4eb6d0997c692cbfe3d2ddc18cca6
+vendor/lib64/vendor.qti.spu@2.0.so|644f2337e359d4f6a221f459f6a96951fe17fa44
+
+# Hermes / Weaver
+vendor/bin/hermesd
+vendor/etc/init/hermesd.rc
+vendor/etc/vintf/manifest/iweaver_v1_manifest.xml
+vendor/etc/secnvm/k250a_47000301_0.img
+vendor/etc/secnvm/k250a_47000305_c.img
+vendor/etc/secnvm/k250a_47000306_1.img
+vendor/lib64/libese-grdg.so
+vendor/lib64/libhermes_bdbridge.so
+vendor/lib64/libhwvault.so
+vendor/lib64/libspcom.so
+vendor/lib64/vendor.samsung.hardware.security.hermes-V1-ndk_platform.so
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-aidl-service-qti
@@ -745,6 +771,21 @@ vendor/etc/init/ipa_fws.rc
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti
 vendor/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc
+
+# Keymint
+vendor/bin/hw/android.hardware.security.keymint-service:vendor/bin/hw/android.hardware.security.keymint-service_samsung|bdd6c7fee3a6efa632c9e4ce294925bc4afb7a58
+vendor/etc/init/android.hardware.security.keymint-service.rc|23773b1927bb40dc185ea173766015236437b580
+vendor/lib64/libskeymint10device.so|ce6d5b4d3b553dab0b469b1d86281e22632798cb
+vendor/lib64/libskeymint_cli.so|7df292409438e34e3ae70a029ea88a7c519d827a
+vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so|43dea14309b0cc50a22d2232280de812ec462639
+vendor/lib64/lib_android_keymaster_keymint_utils.so:vendor/lib64/lib_android_keymaster_keymint_utils_samsung.so;FIX_SONAME|fe70841a7e9db9a082eb54875f55b0171a242929
+vendor/lib64/libkeymaster4_1support.so:vendor/lib64/libkeymaster4_1support_samsung.so;FIX_SONAME|1f826b7bef0e750fb70dea7e16f04644acc70852
+vendor/lib64/libkeymaster4support.so:vendor/lib64/libkeymaster4support_samsung.so;FIX_SONAME|33cfd97613877c4a95f06a0859a0b60ef52370e6
+vendor/lib64/libkeymaster_messages.so:vendor/lib64/libkeymaster_messages_samsung.so;FIX_SONAME|c0c6a76d87820da5de6f502567c329c35a36507b
+vendor/lib64/libkeymaster_portable.so:vendor/lib64/libkeymaster_portable_samsung.so;FIX_SONAME|7a8eefeb71560e4b349dd38824fb0fa18e7e85fc
+vendor/lib64/libkeymint.so:vendor/lib64/libkeymint_samsung.so;FIX_SONAME|92baf4ccde2e59ef72f017c54f56a6605a78cb13
+vendor/lib64/libpuresoftkeymasterdevice.so:vendor/lib64/libpuresoftkeymasterdevice_samsung.so;FIX_SONAME|286d6905a7a2b13fc1ba4c0f11c218544dce12f1
+vendor/lib64/libsoft_attestation_cert.so:vendor/lib64/libsoft_attestation_cert_samsung.so;FIX_SONAME|a147f9a68dee9968615ac80fcdbd6d9c07761e7f
 
 # Local time
 vendor/lib/hw/local_time.default.so
@@ -1023,7 +1064,6 @@ vendor/etc/wifi/vendor_cmd.xml
 # Miscellaneous
 vendor/app/com.qualcomm.qti.gpudrivers.taro.api32/com.qualcomm.qti.gpudrivers.taro.api32.apk
 vendor/bin/hw/macloader
-vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
 vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
 vendor/bin/hw/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0-service
@@ -1063,10 +1103,8 @@ vendor/etc/hyper/config_hyper_permission.json
 vendor/etc/hyper/config_vendor.json
 vendor/etc/init/btcoex_cont_config.rc
 vendor/etc/init/camera.unihal.rc
-vendor/etc/init/fingerprint_common.rc
 vendor/etc/init/init.audio.samsung.rc
 vendor/etc/init/init.avb.rc
-vendor/etc/init/init.fingerprint.rc
 vendor/etc/init/init.qti.media.rc
 vendor/etc/init/init.qti.qcv.rc
 vendor/etc/init/init.ramplus.rc
@@ -1079,7 +1117,6 @@ vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/init/pa_daemon_qsee.rc
 vendor/etc/init/vendor.qti.diag.rc
-vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0-service.rc
@@ -1163,9 +1200,6 @@ vendor/etc/saiv/personal_1.0/PersonalModel-timestamp
 vendor/etc/saiv/personal_1.0/PhotoParsing5_AF_FACE_128_DSP_iter_136589_v2.2_q.dlc
 vendor/etc/saiv/personal_1.0/PhotoParsing5_AWB_FACE_256_DSP_iter_495623_v2.0_q.dlc
 vendor/etc/saiv/personal_1.0/PhotoParsing6_AWB_FACE_256_DSP_iter_300000_v2.4_q.dlc
-vendor/etc/secnvm/k250a_47000301_0.img
-vendor/etc/secnvm/k250a_47000304_c.img
-vendor/etc/secnvm/k250a_47000306_1.img
 vendor/etc/singletake/Blur/BlurClassifier.dlc
 vendor/etc/singletake/ClarityScorer/ClarityScorer.tflite
 vendor/etc/singletake/Pet/SRIB_PetFacialAction.dlc
@@ -1187,7 +1221,6 @@ vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/etc/vintf/manifest/deviceManifest.xml
-vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.widevine.keyprov-service.xml
 vendor/etc/DsgpPolicy.csv
 vendor/etc/batching.conf
@@ -1361,7 +1394,6 @@ vendor/lib/libauto_framing_arcsoft.uniplugin@1.0.so
 vendor/lib/libautotracking_interface.so
 vendor/lib/libbase64.so
 vendor/lib/libbatching.so
-vendor/lib/libbauthtzcommon.so
 vendor/lib/libbitmlengine.so
 vendor/lib/libbitmlenginev2.so
 vendor/lib/libbodyid.arcsoft.so
@@ -1729,7 +1761,6 @@ vendor/lib64/libauto_framing_arcsoft.uniplugin@1.0.so
 vendor/lib64/libautotracking_interface.so
 vendor/lib64/libbase64.so
 vendor/lib64/libbatching.so
-vendor/lib64/libbauthtzcommon.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
 vendor/lib64/libbodyid.arcsoft.so
@@ -1769,7 +1800,6 @@ vendor/lib64/libdsutils.so
 vendor/lib64/libdualcam_refocus_video.so
 vendor/lib64/libegis_fp_normal_sensor_test.so
 vendor/lib64/libengine_did.so
-vendor/lib64/libese-grdg.so
 vendor/lib64/libesesbprovision.so
 vendor/lib64/libeva.so
 vendor/lib64/libeva_util.so
@@ -1800,7 +1830,6 @@ vendor/lib64/libhdraid.gpu.arcsoft.so
 vendor/lib64/libhdraid.npu.arcsoft.so
 vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
-vendor/lib64/libhwvault.so
 vendor/lib64/libhypermotion_core.so
 vendor/lib64/libhypermotion_interface.so
 vendor/lib64/libhypervintf.so
@@ -1997,7 +2026,6 @@ vendor/lib64/libsoc_helper_jni.so
 vendor/lib64/libsocial_image_enhancement.uniplugin@1.0.so
 vendor/lib64/libsomxcmn.so
 vendor/lib64/libspatializerparamstorage.so
-vendor/lib64/libspcom.so
 vendor/lib64/libspeakercalibration.so
 vendor/lib64/libspl.so
 vendor/lib64/libsrib_CNNInterface.camera.samsung.so
@@ -2074,7 +2102,6 @@ vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 vendor/lib64/vendor.samsung.frameworks.security.dsms-V1-ndk_platform.so
 vendor/lib64/vendor.samsung.frameworks.security.ucm.crypto@1.0.so
-vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint@3.0.so
 vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so
 vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so

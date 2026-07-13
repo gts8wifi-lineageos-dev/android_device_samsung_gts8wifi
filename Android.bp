@@ -13,6 +13,12 @@ soong_namespace {
     ],
 }
 
+vintf_fragment {
+    name: "android.hardware.security.keymint-service.samsung.xml",
+    src: "configs/vintf/android.hardware.security.keymint-service.samsung.xml",
+    vendor: true,
+}
+
 install_symlink {
     name: "firmware_wlanmdsp.otaupdate_symlink",
     vendor: true,

@@ -15,6 +15,10 @@ ro.simbased.changetype                           u:object_r:telephony_config_pro
 # Sensors
 ro.factory.sensor.                               u:object_r:exported_system_prop:s0
 
+# Security
+security.securehw.available                      u:object_r:vendor_securehw_prop:s0
+security.securenvm.available                     u:object_r:vendor_securenvm_prop:s0
+
 # Thermal
 dev.sdhms.thermal.hv                             u:object_r:exported_system_prop:s0
 

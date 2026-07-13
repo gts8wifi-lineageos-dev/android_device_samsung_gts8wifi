@@ -22,6 +22,7 @@ type drb_device, dev_type;
 type dun_device, dev_type;
 
 # TrustZone device
+type k250a_device, dev_type;
 type ssp_device, dev_type;
 type tz_device, dev_type;
 

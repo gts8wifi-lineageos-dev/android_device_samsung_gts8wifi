@@ -36,6 +36,14 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
+        'lib_android_keymaster_keymint_utils',
+        'libkeymaster4_1support',
+        'libkeymaster4support',
+        'libkeymaster_messages',
+        'libkeymaster_portable',
+        'libkeymint',
+        'libpuresoftkeymasterdevice',
+        'libsoft_attestation_cert',
     ): lib_fixup_vendor_suffix,
     (
         'android.hardware.camera.provider@2.4-legacy',
@@ -75,6 +83,58 @@ blob_fixups: blob_fixups_user_type = {
      'vendor/lib64/libspcom.so',
      'vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti'): blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
+
+    ('vendor/bin/hw/android.hardware.security.keymint-service_samsung',
+     'vendor/lib64/libskeymint_cli.so',
+     'vendor/lib64/libskeymint10device.so',
+     'vendor/lib64/vendor.samsung.hardware.keymint-V1-ndk_platform.so'): blob_fixup()
+        .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so', 'android.hardware.security.keymint-V1-ndk.so')
+        .replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so', 'android.hardware.security.secureclock-V1-ndk.so')
+        .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so', 'android.hardware.security.sharedsecret-V1-ndk.so')
+        .add_needed('android.hardware.security.rkp-V3-ndk.so')
+        .replace_needed('libcrypto.so', 'libcrypto-v33.so')
+        .replace_needed('libcppbor_external.so', 'libcppbor.so')
+        .add_needed('libbase_compat_shim.so')
+        .replace_needed('libkeymaster_portable.so', 'libkeymaster_portable_samsung.so')
+        .replace_needed('libkeymint.so', 'libkeymint_samsung.so')
+        .replace_needed('libpuresoftkeymasterdevice.so', 'libpuresoftkeymasterdevice_samsung.so')
+        .replace_needed('libkeymaster4support.so', 'libkeymaster4support_samsung.so')
+        .replace_needed('libkeymaster4_1support.so', 'libkeymaster4_1support_samsung.so'),
+
+    ('vendor/lib64/libkeymint_samsung.so',
+     'vendor/lib64/lib_android_keymaster_keymint_utils_samsung.so',
+     'vendor/lib64/libkeymaster_portable_samsung.so',
+     'vendor/lib64/libpuresoftkeymasterdevice_samsung.so',
+     'vendor/lib64/libkeymaster4support_samsung.so',
+     'vendor/lib64/libkeymaster4_1support_samsung.so',
+     'vendor/lib64/libkeymaster_messages_samsung.so',
+     'vendor/lib64/libsoft_attestation_cert_samsung.so'): blob_fixup()
+        .replace_needed('android.hardware.security.keymint-V1-ndk_platform.so', 'android.hardware.security.keymint-V1-ndk.so')
+        .replace_needed('android.hardware.security.secureclock-V1-ndk_platform.so', 'android.hardware.security.secureclock-V1-ndk.so')
+        .replace_needed('android.hardware.security.sharedsecret-V1-ndk_platform.so', 'android.hardware.security.sharedsecret-V1-ndk.so')
+        .replace_needed('libcrypto.so', 'libcrypto-v33.so')
+        .replace_needed('libcppbor_external.so', 'libcppbor.so')
+        .replace_needed('lib_android_keymaster_keymint_utils.so', 'lib_android_keymaster_keymint_utils_samsung.so')
+        .replace_needed('libkeymaster_messages.so', 'libkeymaster_messages_samsung.so')
+        .replace_needed('libkeymaster_portable.so', 'libkeymaster_portable_samsung.so')
+        .replace_needed('libpuresoftkeymasterdevice.so', 'libpuresoftkeymasterdevice_samsung.so')
+        .replace_needed('libsoft_attestation_cert.so', 'libsoft_attestation_cert_samsung.so')
+        .replace_needed('libkeymaster4support.so', 'libkeymaster4support_samsung.so'),
+
+    'vendor/etc/init/android.hardware.security.keymint-service.rc': blob_fixup()
+        .regex_replace(
+            '/vendor/bin/hw/android.hardware.security.keymint-service\n',
+            '/vendor/bin/hw/android.hardware.security.keymint-service_samsung\n',
+        ),
+
+    'vendor/lib64/hw/gatekeeper.mdfpp.so': blob_fixup()
+        .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
+
+    'vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc': blob_fixup()
+        .regex_replace(
+            'service vendor.fps_hal /vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service\n',
+            'service vendor.fps_hal /vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service\n    disabled\n',
+        ),
 
      ('vendor/lib64/camx.device@3.2-impl.so',
       'vendor/lib64/camx.device@3.4-impl.so'): blob_fixup()

@@ -21,6 +21,7 @@
 /(vendor|system/vendor)/bin/hw/gpsd               u:object_r:gpsd_exec:s0
 /(vendor|system/vendor)/bin/hw/macloader          u:object_r:macloader_exec:s0
 /(vendor|system/vendor)/bin/hw/sehradiomanager    u:object_r:sehradiomanager_exec:s0
+/(vendor|system/vendor)/bin/hermesd               u:object_r:hermesd_exec:s0
 /(vendor|system/vendor)/bin/factory\.ssc          u:object_r:factory_ssc_exec:s0
 /(vendor|system/vendor)/bin/secril_config_svc     u:object_r:secril_config_svc_exec:s0
 
@@ -37,6 +38,7 @@
 /dev/dun                       u:object_r:dun_device:s0
 /dev/esfp[0-9]+                u:object_r:fp_sensor_device:s0
 /dev/goodix_fp                 u:object_r:goodix_device:s0
+/dev/k250a                     u:object_r:k250a_device:s0
 /dev/network_latency           u:object_r:radio_device:s0
 /dev/network_throughput        u:object_r:radio_device:s0
 /dev/p61                       u:object_r:secure_element_device:s0
@@ -49,6 +51,7 @@
 /dev/tuihw                     u:object_r:tz_device:s0
 /dev/tzic                      u:object_r:tz_device:s0
 /dev/tzirs                     u:object_r:tz_device:s0
+/dev/socket/hermes_secnvm     u:object_r:hermes_socket:s0
 
 # EFS
 /efs/Battery(/.*)?                           u:object_r:battery_efs_file:s0
@@ -99,6 +102,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.camera\.provider@4\.0-service_64                  u:object_r:hal_camera_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.health-service\.samsung                                   u:object_r:hal_health_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@4\.0-service\.samsung                           u:object_r:hal_keymaster_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.security\.keymint-service_samsung                         u:object_r:hal_keymint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@[0-9]\.[0-9]-service\.samsung                         u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power(@[0-9]\.[0-9])?-service\.pixel-libperfmgr           u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.secure_element(@[0-9]\.[0-9])?-service                    u:object_r:hal_secure_element_default_exec:s0
