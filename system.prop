@@ -6,3 +6,16 @@ ro.netflix.bsp_rev=Q8450-34634-1
 
 # CameraX
 ro.camerax.extensions.enabled=true
+
+ro.config.media_sound=Media_preview_Touch_the_light.ogg
+ro.config.notification_sound_2=Signal.ogg
+ro.config.pageboost.mem_prepare.enabled=true
+ro.config.pageboost.vramdisk.bootfile.enabled=true
+ro.config.pageboost.vramdisk.without_predict=false
+ro.config.ringtone_2=Atomic_Bell.ogg
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
+
+ro.security.cass.feature=1
+ro.security.keystore.keytype=sakv2,gak,sgak,
+ro.security.vpnpp.release=1.0
+ro.security.vpnpp.ver=2.4

@@ -21,8 +21,12 @@ allow hal_camera_default vendor_xdsp_device:chr_file { ioctl read getattr lock m
 
 allow hal_camera_default spu_file:dir search;
 
+allow hal_camera_default sec_efs_file:dir search;
+
 allow hal_camera_default hal_system_suspend_service:service_manager find;
 
 allow hal_camera_default sysfs_oem_memory:file { getattr open read write };
 
 set_prop(hal_camera_default, vendor_sec_camera_prop)
+
+set_prop(hal_camera_default, vendor_camera_status_prop)

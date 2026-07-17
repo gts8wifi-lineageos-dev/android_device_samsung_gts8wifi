@@ -11,3 +11,8 @@ allow hal_audio_default vendor_sysfs_cirrus_cal:file rw_file_perms;
 get_prop(hal_audio_default, vendor_radio_prop)
 
 dontaudit hal_audio_default { default_prop radio_prop }:file { getattr map open read };
+
+allow hal_audio_default dmabuf_system_heap_device:chr_file rw_file_perms;
+allow hal_audio_default vendor_agm_device:chr_file rw_file_perms;
+allow hal_audio_default vendor_sysfs_agm:file rw_file_perms;
+allow hal_audio_default debugfs:dir r_dir_perms;

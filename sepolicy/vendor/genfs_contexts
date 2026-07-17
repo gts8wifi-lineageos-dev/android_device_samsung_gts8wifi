@@ -3,6 +3,8 @@ genfscon sysfs /devices/virtual/cirrus/cirrus_bd            u:object_r:vendor_sy
 genfscon sysfs /devices/virtual/cirrus/cirrus_cal           u:object_r:vendor_sysfs_cirrus_cal:s0
 
 # Battery
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply                        u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:sec-direct-charger/power_supply             u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/soc/soc:sec-direct-charger/power_supply/sec-direct-charger/type                        u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/980000.i2c/i2c-2/2-0057/power_supply/pca9468-charger/type                          u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/980000.i2c/i2c-2/2-0066/max77705-charger/power_supply/otg/type                     u:object_r:vendor_sysfs_battery_supply:s0
@@ -12,6 +14,9 @@ genfscon sysfs /devices/platform/soc/980000.i2c/i2c-5/5-0057/power_supply/pca946
 genfscon sysfs /devices/platform/soc/980000.i2c/i2c-5/5-0066/max77705-charger/power_supply/otg/type                     u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/980000.i2c/i2c-5/5-0066/max77705-charger/power_supply/max77705-charger/type        u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/980000.i2c/i2c-5/5-0066/max77705-fuelgauge/power_supply/max77705-fuelgauge/type    u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/994000.i2c/i2c-62/62-0066/max77705-charger/power_supply                           u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/994000.i2c/i2c-62/62-0066/max77705-fuelgauge/power_supply                         u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-60/60-0063/power_supply                                            u:object_r:sysfs_batteryinfo:s0
 
 # Camera
 genfscon sysfs /devices/virtual/camera                           u:object_r:vendor_sysfs_camera:s0

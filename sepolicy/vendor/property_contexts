@@ -4,6 +4,7 @@ vendor.bluetooth_nv_ver                          u:object_r:vendor_bluetooth_pro
 
 # Camera
 persist.vendor.sec.camera.*                      u:object_r:vendor_sec_camera_prop:s0
+service.camera.                                  u:object_r:vendor_camera_status_prop:s0
 
 # GNSS
 vendor.gnss.psds                                 u:object_r:vendor_gnss_psds_prop:s0
@@ -33,3 +34,4 @@ vendor.sys.qseecomd.                             u:object_r:vendor_qseecomd_prop
 ro.vendor.wifi.                                  u:object_r:vendor_wifi_prop:s0
 vendor.wifi.                                     u:object_r:vendor_wifi_prop:s0
 vendor.qcom.wifi.                                u:object_r:vendor_wifi_prop:s0
+vendor.wiff.dualconcurrent.interface             u:object_r:vendor_wifi_prop:s0
