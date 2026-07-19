@@ -23,7 +23,7 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="gts8wifixx-user 15 AP3A.240905.015.A2 X700XXS9DYF4 release-keys" \
-    BuildFingerprint=samsung/gts8wifixx/gts8wifi:15/AP3A.240905.015.A2/X700XXS9DYF4:user/release-keys \
+    BuildDesc="gts8wifixx-user 16 BP2A.250605.031.A3 X700XXSBEZE1 release-keys" \
+    BuildFingerprint=samsung/gts8wifixx/gts8wifi:16/BP2A.250605.031.A3/X700XXSBEZE1:user/release-keys \
     DeviceProduct=gts8wifi \
     SystemName=gts8wifi

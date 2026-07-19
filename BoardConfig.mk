@@ -196,7 +196,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2025-07-01
+VENDOR_SECURITY_PATCH := 2026-05-05
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
