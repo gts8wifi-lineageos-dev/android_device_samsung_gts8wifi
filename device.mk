@@ -97,10 +97,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 PRODUCT_PACKAGES += \
-    camera.device@3.2-impl.samsung \
-    camera.device@3.3-impl.samsung \
-    camera.device@3.4-impl.samsung \
-    camera.device@3.5-impl.samsung
+    android.hardware.camera.provider-service.samsung \
+    camera.device-impl.samsung
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -266,8 +264,9 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,samsungVars,target_specific_header_path,device/samsung/gts8wifi/include)
 
 # Samsung camera device HAL
-$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
-$(call soong_config_set,samsungCameraVars,needs_sec_unihal_fields,true)
+$(call soong_config_set_bool,samsungCameraVars,needs_sec_reserved_field,true)
+$(call soong_config_set_bool,samsungCameraVars,needs_sec_unihal_fields,true)
+$(call soong_config_set_bool,samsungCameraVars,needs_sec_torch_strength_early,true)
 
 # Memtrack
 PRODUCT_PACKAGES += \

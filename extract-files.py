@@ -136,33 +136,6 @@ blob_fixups: blob_fixups_user_type = {
             'service vendor.fps_hal /vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service\n    disabled\n',
         ),
 
-     ('vendor/lib64/camx.device@3.2-impl.so',
-      'vendor/lib64/camx.device@3.4-impl.so'): blob_fixup()
-        .replace_needed('libcamera_provider_shim.so', 'libcamera_provider_shim.samsung.so')
-        .add_needed('libcamera_provider_shim.samsung.so'),
-
-    'vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so': blob_fixup()
-        .replace_needed('libcamera_provider_shim.so', 'libcamera_provider_shim.samsung.so')
-        .add_needed('libcamera_provider_shim.samsung.so')
-        .replace_needed('camera.device@3.2-impl.so', 'camera.device@3.2-impl.samsung.so')
-        .replace_needed('camera.device@3.3-impl.so', 'camera.device@3.3-impl.samsung.so')
-        .replace_needed('camera.device@3.4-impl.so', 'camera.device@3.4-impl.samsung.so')
-        .replace_needed('camera.device@3.5-impl.so', 'camera.device@3.5-impl.samsung.so'),
-
-    'vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so': blob_fixup()
-        .add_needed('libshim_camera.so')
-        .replace_needed('camera.device@3.2-impl.so', 'camera.device@3.2-impl.samsung.so')
-        .replace_needed('camera.device@3.3-impl.so', 'camera.device@3.3-impl.samsung.so')
-        .replace_needed('camera.device@3.4-impl.so', 'camera.device@3.4-impl.samsung.so')
-        .replace_needed('camera.device@3.5-impl.so', 'camera.device@3.5-impl.samsung.so'),
-
-    ('vendor/lib/vendor.samsung.hardware.camera.provider@4.0-legacy.so',
-     'vendor/lib/vendor.samsung.hardware.camera.device@5.0-impl.so'): blob_fixup()
-        .replace_needed('camera.device@3.2-impl.so', 'camera.device@3.2-impl.samsung.so')
-        .replace_needed('camera.device@3.3-impl.so', 'camera.device@3.3-impl.samsung.so')
-        .replace_needed('camera.device@3.4-impl.so', 'camera.device@3.4-impl.samsung.so')
-        .replace_needed('camera.device@3.5-impl.so', 'camera.device@3.5-impl.samsung.so'),
-
     ('vendor/lib64/libc2filterplugin.so',
      'vendor/lib64/unihal_android.so',
      'vendor/lib/libapex_cmn.so'): blob_fixup()

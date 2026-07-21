@@ -228,10 +228,6 @@ vendor/lib/libvdis_interface.so
 vendor/lib/libvideoutils.so
 vendor/lib/vendor.qti.hardware.camera.aon@1.0-service-impl.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib/vendor.samsung.hardware.camera.device@5.0-impl.so
-vendor/lib/vendor.samsung.hardware.camera.device@5.0.so
-vendor/lib/vendor.samsung.hardware.camera.provider@4.0-legacy.so
-vendor/lib/vendor.samsung.hardware.camera.provider@4.0.so
 vendor/lib/com.qti.feature2.anchorsync.so
 vendor/lib/com.qti.feature2.demux.so
 vendor/lib/com.qti.feature2.derivedoffline.so
@@ -1064,7 +1060,6 @@ vendor/etc/wifi/vendor_cmd.xml
 # Miscellaneous
 vendor/app/com.qualcomm.qti.gpudrivers.taro.api32/com.qualcomm.qti.gpudrivers.taro.api32.apk
 vendor/bin/hw/macloader
-vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
 vendor/bin/hw/vendor.samsung.hardware.security.drk@2.0-service
 vendor/bin/hw/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0-service
 vendor/bin/hw/vendor.samsung.hardware.security.skpm@1.0-service
@@ -1117,7 +1112,6 @@ vendor/etc/init/init_thermal-engine-v2.rc
 vendor/etc/init/loc-launcher.rc
 vendor/etc/init/pa_daemon_qsee.rc
 vendor/etc/init/vendor.qti.diag.rc
-vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0-service.rc
 vendor/etc/init/vendor.samsung.hardware.security.skpm@1.0-service.rc
@@ -1220,7 +1214,6 @@ vendor/etc/singletake/saliency/FixPNet.dlc
 vendor/etc/ssg/ta_config.json
 vendor/etc/ssg/tz_whitelist.json
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
-vendor/etc/vintf/manifest/deviceManifest.xml
 vendor/etc/vintf/manifest/vendor.samsung.hardware.security.widevine.keyprov-service.xml
 vendor/etc/DsgpPolicy.csv
 vendor/etc/batching.conf
@@ -2102,10 +2095,6 @@ vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 vendor/lib64/vendor.samsung.frameworks.security.dsms-V1-ndk_platform.so
 vendor/lib64/vendor.samsung.frameworks.security.ucm.crypto@1.0.so
-vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so
-vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
-vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
-vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
 vendor/lib64/vendor.samsung.hardware.gnss-V2-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.health@2.0.so
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk_platform.so

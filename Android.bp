@@ -40,12 +40,6 @@ prebuilt_hidl_interfaces {
     ],
 }
 prebuilt_hidl_interfaces {
-    name: "hidl_camera_interface",
-    interfaces: [
-        "vendor.samsung.hardware.camera.provider@4.0::ISehCameraProvider",
-    ],
-}
-prebuilt_hidl_interfaces {
     name: "hidl_drk_interface",
     interfaces: [
         "vendor.samsung.hardware.security.drk@2.0::ISehDrk",
