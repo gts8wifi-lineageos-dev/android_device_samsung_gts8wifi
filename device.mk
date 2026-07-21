@@ -135,7 +135,6 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.6.vendor:64 \
     vendor.display.config@1.7.vendor:64 \
     vendor.display.config@1.8.vendor:64 \
-    vendor.display.config@1.8.vendor:64 \
     vendor.display.config@1.9.vendor:64 \
     vendor.display.config@1.11.vendor:64 \
     vendor.display.config@1.12.vendor:64 \

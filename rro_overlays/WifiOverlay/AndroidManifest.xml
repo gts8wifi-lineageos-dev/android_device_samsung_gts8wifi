@@ -10,7 +10,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<!-- Pixel specific wifi overlays -->
+<!-- gts8wifi specific wifi overlays -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.wifi.resources.samsung_gts8wifi"
     android:versionCode="1"

@@ -130,12 +130,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/hw/gatekeeper.mdfpp.so': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
 
-    'vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc': blob_fixup()
-        .regex_replace(
-            'service vendor.fps_hal /vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service\n',
-            'service vendor.fps_hal /vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service\n    disabled\n',
-        ),
-
     ('vendor/lib64/libc2filterplugin.so',
      'vendor/lib64/unihal_android.so',
      'vendor/lib/libapex_cmn.so'): blob_fixup()

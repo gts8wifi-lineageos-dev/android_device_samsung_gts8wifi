@@ -697,20 +697,12 @@ vendor/etc/init/android.hardware.dumpstate@1.1-service-lazy.rc
 vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service-lazy.xml
 
 # Fingerprint
-vendor/bin/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-service
 vendor/etc/init/fingerprint_common.rc
 vendor/etc/init/init.fingerprint.rc
-vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc
-vendor/etc/vintf/manifest/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.xml
-vendor/lib/hw/fingerprint.default.so
 vendor/lib/libbauthserver.so
 vendor/lib/libbauthtzcommon.so
-vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
-vendor/lib64/hw/fingerprint.default.so
 vendor/lib64/libbauthserver.so
 vendor/lib64/libbauthtzcommon.so
-vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
-vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint@3.0.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service|96e226f05fe54542458c0f0d9faf390921207269
@@ -1745,7 +1737,6 @@ vendor/lib64/lib_SamsungRec_07010.so
 vendor/lib64/libadm.so
 vendor/lib64/libadreno_app_profiles.so
 vendor/lib64/libadreno_utils.so
-# vendor/lib64/libsndcardparser.so
 vendor/lib64/libai_denoiser_interface.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libaivideocentral.arcsoft.so
