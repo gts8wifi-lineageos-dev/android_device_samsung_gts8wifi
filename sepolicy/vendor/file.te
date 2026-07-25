@@ -52,9 +52,6 @@ type sysfs_oem_memory, fs_type, sysfs_type;
 type proc_simslot_count, fs_type, proc_type;
 
 # Root folders
-type carrier_file, fs_type;
-allow carrier_file labeledfs:filesystem associate;
-
 type dqmdbg_file, fs_type;
 allow dqmdbg_file labeledfs:filesystem associate;
 

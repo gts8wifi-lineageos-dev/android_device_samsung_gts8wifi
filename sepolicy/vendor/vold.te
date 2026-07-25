@@ -1,12 +1,10 @@
 allow vold {
-    carrier_file
     efs_file
     sec_efs_file
     spu_file
 }:dir create_dir_perms;
 
 allow vold {
-    carrier_file
     efs_file
     sec_efs_file
     spu_file

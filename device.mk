@@ -365,13 +365,16 @@ PRODUCT_PACKAGES += \
     init.samsung.power.rc \
     init.samsung.rc \
     init.target.rc \
-    init.recovery.qcom.rc \
-    init.recovery.samsung.rc
+    init.recovery.qcom.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
+PRODUCT_COPY_FILES += \
+    vendor/samsung/gts8wifi/proprietary/vendor/firmware/tsp_novatek/nt36523_gts8_csot.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/tsp_novatek/nt36523_gts8_csot.bin \
+    vendor/samsung/gts8wifi/proprietary/vendor/firmware/tsp_novatek/nt36523_gts8_tianma.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/tsp_novatek/nt36523_gts8_tianma.bin
 
 # Sensors
 PRODUCT_PACKAGES += \

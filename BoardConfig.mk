@@ -59,7 +59,6 @@ TARGET_SCREEN_DENSITY := 340
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 BOARD_ROOT_EXTRA_FOLDERS += \
-    carrier \
     efs \
     metadata \
     misc \
@@ -189,6 +188,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_RECOVERY_MKBOOTIMG_ARGS += --header_version 2
+BOARD_RECOVERY_MKBOOTIMG_ARGS += --cmdline "$(BOARD_KERNEL_CMDLINE) androidboot.hardware=qcom androidboot.usbcontroller=a600000.dwc3 bootconfig"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 

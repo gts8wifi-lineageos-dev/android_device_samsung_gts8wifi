@@ -1,5 +1,4 @@
 # Block devices
-type carrier_block_device, dev_type;
 type debug_block_device, dev_type;
 type dsp_block_device, dev_type;
 type dqmdbg_block_device, dev_type;

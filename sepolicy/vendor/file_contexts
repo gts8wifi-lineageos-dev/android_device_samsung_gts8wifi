@@ -1,5 +1,4 @@
 # Block devices
-/dev/block/platform/soc/1d84000\.ufshc/by-name/carrier           u:object_r:carrier_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/config            u:object_r:frp_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/debug             u:object_r:debug_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/dqmdbg            u:object_r:dqmdbg_block_device:s0
@@ -74,7 +73,6 @@
 /mnt/vendor/efs/wifi(/.*)?                   u:object_r:wifi_efs_file:s0
 
 # Root folders
-/carrier(/.*)?                               u:object_r:carrier_file:s0
 /dqmdbg(/.*)?                                u:object_r:dqmdbg_file:s0
 /misc(/.*)?                                  u:object_r:misc_file:s0
 /omr(/.*)?                                   u:object_r:omr_file:s0

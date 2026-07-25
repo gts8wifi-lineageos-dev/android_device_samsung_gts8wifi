@@ -1,7 +1,6 @@
 allow fsck self:capability kill;
 
 allow fsck {
-    carrier_block_device
     dqmdbg_block_device
     efs_block_device
     omr_block_device

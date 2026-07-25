@@ -59,11 +59,6 @@ on post-fs
     restorecon /efs
 
 on post-fs-data
-    # carrier partition
-    chown system system /carrier
-    chmod 0771 /carrier
-    restorecon /carrier
-
     chown system system /spu
     chmod 0771 /spu
     restorecon /spu
@@ -125,9 +120,6 @@ service factory_ssc /vendor/bin/factory.ssc
     class core
     user system
     group system radio inet diag net_admin net_raw sdcard_rw sdcard_r media_rw
-
-on early-boot && property:ro.binary.type=factory
-    umount /vendor/vm-system
 
 on property:sys.boot_completed=1
     setprop ro.factory.sensor.delay.init 1
