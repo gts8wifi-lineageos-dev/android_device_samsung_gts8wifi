@@ -1,0 +1,2 @@
+allow vendor_wcnss_service sysfs_wifi:dir search;
+allow vendor_wcnss_service sysfs_wifi:file r_file_perms;
