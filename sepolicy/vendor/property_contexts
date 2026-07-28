@@ -35,3 +35,4 @@ ro.vendor.wifi.                                  u:object_r:vendor_wifi_prop:s0
 vendor.wifi.                                     u:object_r:vendor_wifi_prop:s0
 vendor.qcom.wifi.                                u:object_r:vendor_wifi_prop:s0
 vendor.wiff.dualconcurrent.interface             u:object_r:vendor_wifi_prop:s0
+ru.vendor.wifi.sap.interface                     u:object_r:vendor_wifi_prop:s0

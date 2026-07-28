@@ -1,18 +1,22 @@
 [
   {
     "repository": "android_hardware_samsung",
-    "target_path": "hardware/samsung"
+    "target_path": "hardware/samsung",
+    "branch": "lineage-23.2"
   },
   {
-    "repository": "samsung-sm8450-dev/android_kernel_samsung_sm8450",
-    "target_path": "kernel/samsung/sm8450"
+    "repository": "android_kernel_samsung_sm8450",
+    "target_path": "kernel/samsung/sm8450",
+    "branch": "lineage-23.2"
   },
   {
-    "repository": "samsung-sm8450-dev/android_kernel_samsung_sm8450-devicetrees",
-    "target_path": "kernel/samsung/sm8450-devicetrees"
+    "repository": "android_kernel_samsung_sm8450-devicetrees",
+    "target_path": "kernel/samsung/sm8450-devicetrees",
+    "branch": "lineage-23.2"
   },
   {
-    "repository": "samsung-sm8450-dev/android_kernel_samsung_sm8450-modules",
-    "target_path": "kernel/samsung/sm8450-modules"
+    "repository": "android_kernel_samsung_sm8450-modules",
+    "target_path": "kernel/samsung/sm8450-modules",
+    "branch": "lineage-23.2"
   }
 ]
