@@ -228,7 +228,6 @@ PRODUCT_COPY_FILES += \
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-service.samsung.xml \
     libbase_compat_shim
 
 PRODUCT_COPY_FILES += \

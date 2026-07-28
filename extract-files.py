@@ -138,6 +138,12 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/init/pa_daemon_qsee.rc': blob_fixup()
         .regex_replace('\n    start proca', ''),
 
+    'vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc': blob_fixup()
+        .regex_replace(
+            r'(service vendor-qti-media-c2audio-hal-1-0 [^\n]*\n)(?!    interface )',
+            r'\1    interface android.hardware.media.c2@1.0::IComponentStore default2\n',
+        ),
+
     'vendor/etc/init/wifi_qcom.rc': blob_fixup()
         .regex_replace(r'service vendor\.cnss_dumpcollector .*\n(?:[ \t]+.*\n)*', '')
         .regex_replace(r'(?:stop|start) vendor\.cnss_dumpcollector\n', ''),
