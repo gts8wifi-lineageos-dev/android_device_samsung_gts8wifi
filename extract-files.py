@@ -48,8 +48,6 @@ lib_fixups: lib_fixups_user_type = {
     (
         'android.hardware.camera.provider@2.4-legacy',
         'android.hardware.camera.provider@2.5-legacy',
-        'android.hardware.common-V2-ndk_platform',
-        'android.hardware.gnss-V1-ndk_platform',
         'android.system.keystore2-V1-ndk_platform',
         'libagm',
         'libagmclient',
@@ -77,6 +75,26 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    ('vendor/bin/hw/android.hardware.gnss-aidl-service-qti',
+     'vendor/lib/hw/android.hardware.gnss-aidl-impl-qti.so',
+     'vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so'): blob_fixup()
+        .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
+
+    ('vendor/lib/vendor.qti.hardware.display.config-V1-ndk_platform.so',
+     'vendor/lib/vendor.qti.hardware.display.config-V2-ndk_platform.so',
+     'vendor/lib/vendor.qti.hardware.display.config-V3-ndk_platform.so',
+     'vendor/lib/vendor.qti.hardware.display.config-V4-ndk_platform.so',
+     'vendor/lib/vendor.qti.hardware.display.config-V5-ndk_platform.so',
+     'vendor/lib/vendor.qti.hardware.display.config-V6-ndk_platform.so',
+     'vendor/lib64/vendor.qti.hardware.display.config-V1-ndk_platform.so',
+     'vendor/lib64/vendor.qti.hardware.display.config-V2-ndk_platform.so',
+     'vendor/lib64/vendor.qti.hardware.display.config-V3-ndk_platform.so',
+     'vendor/lib64/vendor.qti.hardware.display.config-V4-ndk_platform.so',
+     'vendor/lib64/vendor.qti.hardware.display.config-V5-ndk_platform.so',
+     'vendor/lib64/vendor.qti.hardware.display.config-V6-ndk_platform.so',
+     'vendor/lib64/vendor.samsung.hardware.media.mpp-V5-ndk_platform.so'): blob_fixup()
+        .replace_needed('android.hardware.common-V2-ndk_platform.so', 'android.hardware.common-V2-ndk.so'),
+
     ('vendor/lib64/libqtikeymaster4.so',
      'vendor/lib64/libkeymasterutils.so',
      'vendor/lib64/libkeymasterdeviceutils.so',

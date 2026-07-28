@@ -415,9 +415,6 @@ PRODUCT_SOONG_NAMESPACES += \
     kernel/samsung/sm8450 \
     kernel/samsung/sm8450-modules
 
-# Remove broken dependency
-PRODUCT_SOURCE_ROOT_DIRS += -hardware/samsung/hidl/vibrator/haptic
-
 # Ueventd
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
@@ -496,9 +493,6 @@ PRODUCT_PACKAGES -= \
 PRODUCT_PACKAGES -= \
     vendor.qti.hardware.AGMIPC@1.0-service
 
-# GNSS vendor blobs still depend on the legacy platform AIDL shim from the Android 12 VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v31/arm64/arch-arm-armv8-a/shared/vndk-core/android.hardware.gnss-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.gnss-V1-ndk_platform.so \
-    prebuilts/vndk/v31/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss-V1-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.gnss-V1-ndk_platform.so \
-    prebuilts/vndk/v31/arm64/arch-arm-armv8-a/shared/vndk-sp/android.hardware.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.common-V2-ndk_platform.so \
-    prebuilts/vndk/v31/arm64/arch-arm64-armv8-a/shared/vndk-sp/android.hardware.common-V2-ndk_platform.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.common-V2-ndk_platform.so
+# The QTI GNSS AIDL service and impl are built against frozen version 1 of android.hardware.gnss
+PRODUCT_PACKAGES += \
+    android.hardware.gnss-V1-ndk
