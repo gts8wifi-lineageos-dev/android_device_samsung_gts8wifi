@@ -316,6 +316,7 @@ PRODUCT_COPY_FILES += \
 # Rootdir
 PRODUCT_PACKAGES += \
     hdm_status.sh \
+    init.cirrus_cal.sh \
     init.class_main.sh \
     init.crda.sh \
     init.kernel.post_boot-cape.sh \

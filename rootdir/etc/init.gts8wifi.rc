@@ -38,6 +38,7 @@ on init
 on late-init
 
 on post-fs
+    start cirrus_cal
 
 on late-fs
 
@@ -251,6 +252,13 @@ on property:sys.boot_completed=1
 on shutdown
 
 # service definition
+
+service cirrus_cal /vendor/bin/init.cirrus_cal.sh
+    class main
+    user root
+    group audio
+    oneshot
+    disabled
 
 # on property triggers
 

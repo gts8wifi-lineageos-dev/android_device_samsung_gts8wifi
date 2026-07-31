@@ -1,0 +1,13 @@
+type cirrus_cal, domain;
+type cirrus_cal_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(cirrus_cal)
+
+allow cirrus_cal vendor_shell_exec:file rx_file_perms;
+allow cirrus_cal vendor_toolbox_exec:file rx_file_perms;
+allow cirrus_cal efs_file:dir search;
+allow cirrus_cal sec_efs_file:dir search;
+allow cirrus_cal sec_efs_file:file r_file_perms;
+allow cirrus_cal vendor_sysfs_cirrus_cal:dir r_dir_perms;
+allow cirrus_cal vendor_sysfs_cirrus_cal:file rw_file_perms;
+allow cirrus_cal kmsg_device:chr_file w_file_perms;

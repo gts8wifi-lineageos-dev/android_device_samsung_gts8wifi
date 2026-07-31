@@ -12,6 +12,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.cirrus_cal.sh",
+    src: "bin/init.cirrus_cal.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.class_main.sh",
     src: "bin/init.class_main.sh",
     vendor: true,
