@@ -486,9 +486,7 @@ $(call inherit-product, vendor/samsung/gts8wifi/gts8wifi-vendor.mk)
 # Avoid loading legacy Samsung display blobs into the Android 16 source-built display stack
 PRODUCT_PACKAGES -= \
     libsdm-disp-vndapis \
-    libsdmextension \
-    libsnapdragoncolor-manager \
-    libsnapdragoncolor-qdcm
+    libsdmextension
 
 # Keep known-crashing HALs out of the initial boot path
 PRODUCT_PACKAGES -= \

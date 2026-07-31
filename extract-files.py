@@ -75,6 +75,9 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    ('vendor/lib64/libsnapdragoncolor-manager.so',): blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2_1.so'),
+
     ('vendor/bin/hw/android.hardware.gnss-aidl-service-qti',
      'vendor/lib/hw/android.hardware.gnss-aidl-impl-qti.so',
      'vendor/lib64/hw/android.hardware.gnss-aidl-impl-qti.so'): blob_fixup()
